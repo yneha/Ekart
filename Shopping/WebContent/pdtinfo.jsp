@@ -15,6 +15,23 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <title>FUNTASTIC TOYS</title>
 <style >
+.img-wrapper {
+    display: inline-block;
+    overflow: hidden;
+}
+
+
+.img-wrapper img {
+ 
+     transition: all .6s ease;
+   
+}
+
+.img-wrapper img:hover {
+    transform:scale(1.5);    
+    
+   
+}
 t1{padding-left:5em;}
 
 .navbar-default {
@@ -260,8 +277,9 @@ GENERAL </th>
     <div class="container-fluid">
 		<div class="row">
 			<div class="col-md-5">
-			<img src=images/beans.jpg>
-			</div>
+			<div class="img-wrapper">
+			<img src="images/beans.jpg" alt="" class="img-responsive">
+			</div></div>
 			<div class="col=md-7">
 			<h2>Cuddles Scholer Teddy - 20 cm(Brown)</h2>
 			<hr>
