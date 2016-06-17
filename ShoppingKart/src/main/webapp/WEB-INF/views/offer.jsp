@@ -4,9 +4,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
 <title>Insert title here</title>
 </head>
-<body>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+<h1 ng-repeat="x in records">{{x}}</h1>
+
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+    $scope.records = [
+        "Alfreds Futterkiste",
+        "Berglunds snabbköp",
+        "Centro comercial Moctezuma",
+        "Ernst Handel",
+    ]
+});
+</script>
 
 </body>
+
 </html>

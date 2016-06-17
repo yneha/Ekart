@@ -12,7 +12,6 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <title>Insert title here</title>
 </head>
-<body>
-<%@ include file="header.jsp" %>
-</body>
+
+
 </html>

@@ -67,6 +67,7 @@ public class LoginController {
 	{
 		return "helpline";
 	}
+	
 	@RequestMapping("/gift")
 	public String gotogift()
 	{
@@ -77,11 +78,7 @@ public class LoginController {
 	{
 		return "cart";
 	}
-	@RequestMapping("/categories")
-	public String gotocategories()
-	{
-		return "categories";
-	}
+	
 	
 	
 

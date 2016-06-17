@@ -42,6 +42,7 @@
 	left: 0;
 }
 
+
 .carousel {
 	background: white;
 }
@@ -54,7 +55,8 @@
 }
 </style>
 </head>
-<body>
+<body >
+
 <div class="container-fluid">
 		<nav class="navbar navbar-default">
 
