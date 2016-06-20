@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<%@ page isELIgnored="false" %>
+<%@ page isELIgnored="false"%>
 
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -42,7 +42,6 @@
 	left: 0;
 }
 
-
 .carousel {
 	background: white;
 }
@@ -50,14 +49,14 @@
 .carousel-caption {
 	position: relative;
 	color: green;
-	left:auto;
-	right:auto;
+	left: auto;
+	right: auto;
 }
 </style>
 </head>
-<body >
+<body>
 
-<div class="container-fluid">
+	<div class="container-fluid">
 		<nav class="navbar navbar-default">
 
 		<div class="navbar-header">
@@ -81,8 +80,8 @@
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="reg"><i class="glyphicon glyphicon-user"></i>
 					Sign Up</a></li>
-			<li><a href="index"><span
-					class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			<li><a href="index"><span class="glyphicon glyphicon-log-in"></span>
+					Login</a></li>
 			<li><a href="cart"><span
 					class="glyphicon glyphicon-shopping-cart"></span> CART</a></li>
 
@@ -95,12 +94,12 @@
 			<div class="col-sm-6 col-sm-offset-3 ">
 				<div id="imaginary_container">
 					<div class="input-group stylish-input-group">
-						<div class="form-group has-feedback has-feedback-left" >
+						<div class="form-group has-feedback has-feedback-left">
 							<input type="text" class="form-control" placeholder="Search" />
 							<i class="glyphicon glyphicon-search form-control-feedback"></i>
 						</div>
 						<span class="input-group-addon">
-							<button type="submit" formaction="hw.jsp">
+							<button type="submit" formaction="#">
 								<span class="glyphicon glyphicon-arrow-right"></span>
 							</button>
 						</span>
@@ -109,16 +108,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- this is for the top navigation bar 
-
-  <nav class="navbar navbar-default" >
-  <div class="container-fluid">
-    
-   
-   
-  </div>
-</nav>-->
-
 
 
 
@@ -130,19 +119,19 @@
 		<div class="row">
 			<div class="col-md-3">
 				<h3>FAST SELLING</h3>
-				<a href="char" class="thumbnail"> 
-				<img src="<c:url value="/resource/image/chopper.jpg" />" 
-				alt="CHOPPER" style="width: 150px; height: 150px">
+				<a href="char" class="thumbnail"> <img
+					src="<c:url value="/resource/image/chopper.jpg" />" alt="CHOPPER"
+					style="width: 150px; height: 150px">
 					<p>
-						<center>
-								<h5>
-									CHOPPER WITH 3 ROTORS<br>Rs.420
-								</h5>
-							</center>
+					<center>
+						<h5>
+							CHOPPER WITH 3 ROTORS<br>Rs.420
+						</h5>
+					</center>
 					</p>
-				</a> <a href="char" class="thumbnail"> 
-				<img src="<c:url value="/resource/image/m.jpg" />" 
-				alt="RUBIX CUBE" style="width: 150px; height: 150px">
+				</a> <a href="char" class="thumbnail"> <img
+					src="<c:url value="/resource/image/m.jpg" />" alt="RUBIX CUBE"
+					style="width: 150px; height: 150px">
 					<p>
 						<strong><center>
 								<h5>
@@ -167,8 +156,8 @@
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
 
-								<a href="angrybird">
-								<img src="<c:url value="/resource/image/angry.jpg" />" 
+								<a href="angrybird"> <img
+									src="<c:url value="/resource/image/angry.jpg" />"
 									alt="Angry Birds"></a>
 								<div class="carousel-caption">
 									<h3>HOT DEAL!!</h3>
@@ -177,9 +166,8 @@
 							</div>
 
 							<div class="item">
-								<a href="lego">
-								<img src="<c:url value="/resource/image/4.jpg" />" 
-								 alt="Lego" /></a>
+								<a href="lego"> <img
+									src="<c:url value="/resource/image/4.jpg" />" alt="Lego" /></a>
 								<div class="carousel-caption">
 									<h3>LEGO</h3>
 									<p>New range of toys available now.</p>
@@ -187,9 +175,8 @@
 							</div>
 
 							<div class="item">
-								<a href="funskool">
-								<img src="<c:url value="/resource/image/b.jpg" />" 
-								alt="Fun Skool"></a>
+								<a href="funskool"> <img
+									src="<c:url value="/resource/image/b.jpg" />" alt="Fun Skool"></a>
 								<div class="carousel-caption">
 									<h3>FUNSKOOL</h3>
 									<p>Launching FunSkool from today!!</p>
@@ -211,79 +198,71 @@
 					</div>
 
 
-</div>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
-					<!-- to display the images in thumbnail -->
+	<!-- to display the images in thumbnail -->
 
-<div class="container">
+	<div class="container">
 		<h2>Best Bargains</h2>
 
 		<div class="row">
 			<div class="col-md-3">
 				<a href="Productservlet?param=f_mono" class="thumbnail">
-					<p>Buy 1 & Get 1 Free!!!</p>
-					<img src="<c:url value="/resource/image/a.jpg" />" 
-					 alt="FunSkool"
+					<p>Buy 1 & Get 1 Free!!!</p> <img
+					src="<c:url value="/resource/image/a.jpg" />" alt="FunSkool"
 					style="width: 150px; height: 150px">
 				</a>
 			</div>
 			<div class="col-md-3">
 				<a href="Productservlet?param=s_bear" class="thumbnail">
-					<p>70% off on Teddy Bear.</p> 
-					<img src="<c:url value="/resource/image/bear.jpeg" />" 
-					 alt="teddy"
+					<p>70% off on Teddy Bear.</p> <img
+					src="<c:url value="/resource/image/bear.jpeg" />" alt="teddy"
 					style="width: 150px; height: 150px">
 				</a>
 			</div>
 			<div class="col-md-3">
 				<a href="remote.jsp" class="thumbnail">
-					<p>Free delivery for Cars</p>
-					<img src="<c:url value="/resource/image/remote.jpg" />" 
-					 alt="cars"
+					<p>Free delivery for Cars</p> <img
+					src="<c:url value="/resource/image/remote.jpg" />" alt="cars"
 					style="width: 150px; height: 150px">
 				</a>
 			</div>
 			<div class="col-md-3">
 				<a href="lego1.jsp" class="thumbnail">
-					<p>10% off on Lego</p>
-					<img src="<c:url value="/resource/image/8.jpg" />" 
-					  alt="cars"
+					<p>10% off on Lego</p> <img
+					src="<c:url value="/resource/image/8.jpg" />" alt="cars"
 					style="width: 150px; height: 150px">
 				</a>
 			</div>
 		</div>
 
-<h2>SHOP BY AGE</h2>
+		<h2>SHOP BY AGE</h2>
 
 		<div class="row">
 			<div class="col-md-3">
-				<a href="hw.jsp" class="circle">
-				<img src="<c:url value="/resource/image/0-2.jpg" />" 
-					alt="0 to 2 years"
+				<a href="hw.jsp" class="circle"> <img
+					src="<c:url value="/resource/image/0-2.jpg" />" alt="0 to 2 years"
 					style="width: 150px; height: 150px">
 				</a>
 			</div>
 			<div class="col-md-3">
-				<a href="hw.jsp" class="circle">
-				<img src="<c:url value="/resource/image/3-4.jpg" />" 
-					 alt="3 to 4 years"
+				<a href="hw.jsp" class="circle"> <img
+					src="<c:url value="/resource/image/3-4.jpg" />" alt="3 to 4 years"
 					style="width: 150px; height: 150px">
 				</a>
 			</div>
 			<div class="col-md-3">
-				<a href="hw.jsp" class="circle">
-				<img src="<c:url value="/resource/image/5-8.jpg" />" 
-					 alt="5 to 8 years"
+				<a href="hw.jsp" class="circle"> <img
+					src="<c:url value="/resource/image/5-8.jpg" />" alt="5 to 8 years"
 					style="width: 150px; height: 150px">
 				</a>
 			</div>
 			<div class="col-md-3">
-				<a href="hw.jsp" class="circle">
-				<img src="<c:url value="/resource/image/9-12.jpg" />" 
-					 alt="9 to 12 years"
-					style="width: 150px; height: 150px">
+				<a href="hw.jsp" class="circle"> <img
+					src="<c:url value="/resource/image/9-12.jpg" />"
+					alt="9 to 12 years" style="width: 150px; height: 150px">
 				</a>
 			</div>
 		</div>
@@ -294,34 +273,29 @@
 		<div class="row">
 			<div class="col-md-3">
 				<a href="hw.jsp" class="thumbnail">
-					<p>Hot Wheels</p> 
-					<img src="<c:url value="/resource/image/hw.jpg" />" 
-					 alt="hot wheels"
+					<p>Hot Wheels</p> <img
+					src="<c:url value="/resource/image/hw.jpg" />" alt="hot wheels"
 					style="width: 150px; height: 150px">
 				</a>
 			</div>
 			<div class="col-md-3">
 				<a href="barbie.jsp" class="thumbnail">
-					<p>Barbie</p>
-					<img src="<c:url value="/resource/image/barbie.jpg" />" 
-					alt="barbie"
+					<p>Barbie</p> <img
+					src="<c:url value="/resource/image/barbie.jpg" />" alt="barbie"
 					style="width: 150px; height: 150px">
 				</a>
 			</div>
 			<div class="col-md-3">
 				<a href="fp.jsp" class="thumbnail">
-					<p>Fisher Price</p> 
-					<img src="<c:url value="/resource/image/fp.png" />" 
-					alt="Fisher Price"
+					<p>Fisher Price</p> <img
+					src="<c:url value="/resource/image/fp.png" />" alt="Fisher Price"
 					style="width: 150px; height: 150px">
 				</a>
 			</div>
 			<div class="col-md-3">
 				<a href="lego.jsp" class="thumbnail">
-					<p>Lego</p> 
-					<img src="<c:url value="/resource/image/lego.png" />" 
-					alt="lego"
-					style="width: 150px; height: 150px">
+					<p>Lego</p> <img src="<c:url value="/resource/image/lego.png" />"
+					alt="lego" style="width: 150px; height: 150px">
 				</a>
 			</div>
 		</div>
@@ -329,9 +303,9 @@
 		<div class="row">
 			<h2>Only 4 U!!</h2>
 			<div class="col-md-3">
-				<a href="Productservlet?param=s_brown" class="thumbnail">
-				<img src="<c:url value="/resource/image/beans.jpg" />" 
-					alt="brown bear" style="width: 150 px; height: 150px;">
+				<a href="Productservlet?param=s_brown" class="thumbnail"> <img
+					src="<c:url value="/resource/image/beans.jpg" />" alt="brown bear"
+					style="width: 150 px; height: 150px;">
 					<p>
 						<strong><center>
 								<h5>BROWN BEAR-Rs.299
@@ -340,9 +314,9 @@
 					</p></a>
 			</div>
 			<div class="col-md-3">
-				<a href="Productservlet?param=s_bheem" class="thumbnail">
-				<img src="<c:url value="/resource/image/bheem.jpg" />" 
-					alt="bheem" style="width: 150 px; height: 150px;">
+				<a href="Productservlet?param=s_bheem" class="thumbnail"> <img
+					src="<c:url value="/resource/image/bheem.jpg" />" alt="bheem"
+					style="width: 150 px; height: 150px;">
 					<p>
 						<strong><center>
 								<h5>CHOTA BHEEM-Rs.150
@@ -351,9 +325,9 @@
 					</p></a>
 			</div>
 			<div class="col-md-3">
-				<a href="Productservlet?param=l_lego" class="thumbnail">
-				<img src="<c:url value="/resource/image/9.jpg" />" 
-				alt="puzzle" style="width: 150 px; height: 150px;">
+				<a href="Productservlet?param=l_lego" class="thumbnail"> <img
+					src="<c:url value="/resource/image/9.jpg" />" alt="puzzle"
+					style="width: 150 px; height: 150px;">
 					<p>
 						<strong><center>
 								<h5>LEGO-Rs.850
@@ -363,9 +337,9 @@
 			</div>
 
 			<div class="col-md-3">
-				<a href="Productservlet?param=s_ele" class="thumbnail">
-				<img src="<c:url value="/resource/image/elephant.jpg" />" 
-				alt="Elephant" style="width: 150 px; height: 150px;">
+				<a href="Productservlet?param=s_ele" class="thumbnail"> <img
+					src="<c:url value="/resource/image/elephant.jpg" />" alt="Elephant"
+					style="width: 150 px; height: 150px;">
 					<p>
 						<strong><center>
 								<h5>ELEPHANT -Rs.450
