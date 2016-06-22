@@ -35,11 +35,8 @@
 <script>
 	var app = angular.module("myApp", []);
 	app.controller("myCtrl", function($scope) {
-		$scope.list = $
-		{
-			list
-		}
-		;
+		$scope.list = ${list};
+		
 	});
 </script>
 <style>
