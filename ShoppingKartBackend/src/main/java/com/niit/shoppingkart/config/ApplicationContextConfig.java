@@ -21,12 +21,14 @@ import com.niit.shoppingkart.dao.ProductDaoImpl;
 @Configuration
 @ComponentScan("com.niit.shoppingkart.bean")
 @EnableTransactionManagement
+
 public class ApplicationContextConfig
 {
-
+	
 	@Bean(name="dataSource")
 	public DataSource getdataSource()
 			{
+		
 			BasicDataSource datasource=new BasicDataSource();
 			datasource.setDriverClassName("org.h2.Driver");
 			datasource.setUrl("jdbc:h2:tcp://localhost/~/test");
@@ -48,6 +50,7 @@ public class ApplicationContextConfig
 	@Autowired
     @Bean(name = "sessionFactory")
     public SessionFactory getSessionFactory(DataSource dataSource) {
+	
     	LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
     	sessionBuilder.addProperties(getHibernateProperties());
     	sessionBuilder.addAnnotatedClasses(Product.class);
@@ -58,6 +61,7 @@ public class ApplicationContextConfig
 	@Bean(name = "transactionManager")
 	public HibernateTransactionManager getTransactionManager(
 			SessionFactory sessionFactory) {
+		
 		HibernateTransactionManager transactionManager = new HibernateTransactionManager(
 				sessionFactory);
 
@@ -65,7 +69,7 @@ public class ApplicationContextConfig
 	}
     
     @Autowired
-    @Bean(name = "productDao")
+    @Bean(name = "ProductDao")
     public ProductDao getProductDao(SessionFactory sessionFactory) {
     	return new ProductDaoImpl(sessionFactory);
     }

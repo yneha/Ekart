@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 @Entity
 
-public class Product implements Serializable{
+public class Product {
 
 	@Id
 	private String pdtid;

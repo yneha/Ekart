@@ -2,6 +2,8 @@ package com.niit.shoppingkart.dao;
 
 import java.util.List;
 
+import org.hibernate.Query;
+
 import com.niit.shoppingkart.bean.Product;
 
 public interface ProductDao {
@@ -10,4 +12,5 @@ public interface ProductDao {
 	public Product get(String pdtid);
 	public void update(Product pdt);
 	public void delete(String id);
+	
 }

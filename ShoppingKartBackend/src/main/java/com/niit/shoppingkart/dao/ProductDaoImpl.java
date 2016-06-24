@@ -5,7 +5,10 @@ import java.util.List;
 
 
 import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,21 +38,43 @@ public class ProductDaoImpl implements ProductDao{
 	}
 
 	public Product get(String pdtid) {
-		// TODO Auto-generated method stub
+		//String hql="from Product where pdtid="+pdtid;
+		//Query q=sessionFactory.openSession().createQuery(hql);
+		
+		Criteria c=sessionFactory.openSession().createCriteria(Product.class);
+		c.add(Restrictions.eq("pdtid", pdtid));
+		
+				
+		
+		@SuppressWarnings("unchecked")
+		List<Product> pdtlist=(List<Product>)c.list();
+		if(pdtlist!= null && !pdtlist.isEmpty())
+		{
+			return pdtlist.get(0);
+		}
+		else
+		{
 		return null;
-	}
-
-	public void update(Product pdt) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void delete(String id) {
-		// TODO Auto-generated method stub
-		
+		}
 	}
 
 	
+	
+	@Transactional
+	public void update(Product pdt) {
+		Session s= sessionFactory.openSession();
+		s.saveOrUpdate(pdt);
+		s.flush();
+		
+	}
 
-
-}
+	@Transactional
+	public void delete(String pdtid) {
+		System.out.println(pdtid);
+		Product pdtdelete=new Product();
+		pdtdelete.setPdtid(pdtid);
+		sessionFactory.getCurrentSession().delete(pdtdelete);
+			
+		
+	}
+	}
