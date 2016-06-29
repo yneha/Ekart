@@ -37,6 +37,22 @@ public class CategoryControllerf {
 		System.out.println(catlist);
 		return mv;
 	 }
+	@RequestMapping("/addpdt")
+	public String gotopdt()
+	{
+		return "addpdt";
+	}
+	@RequestMapping("/addPdt")
+	public ModelAndView addpdt(@ModelAttribute ProductInfo category) {
+		pdtinfo.update(category);
+		ModelAndView mv=new ModelAndView("info");
+		String op="ITEM IS ADDED";
+		mv.addObject("op", op);
+		List<ProductInfo> catlist = pdtinfo.list();
+		mv.addObject("list", catlist);
+		System.out.println(catlist);
+		return mv;
+	 }
 	
 	@RequestMapping("/deletepdt")
 

@@ -69,51 +69,61 @@ t2 {
 	<h1></h1>
 	<center>	<h2>ADD PRODUCT INFORMATION</h2></center>
 	<div class="container">
-	<form:form action="addCategory" method="post">
+	<form:form action="addPdt" method="post">
 	<div class="row">
 		 <div class="form-group">
 		 <div class="col-md-2">
                     <label for="id" >PRODUCT ID</label>
-</div><div class="col-md-6">          
-<c:choose>
-				<c:when test="!empty ${key}">
-<input type="text" id="id"  name="pdtid" class="form-control" 
-disabled="true" readonly="true" />
-					
-					</c:when>
+<
 
-					<c:otherwise>
 <input type="text" id="id" 
 name="pdtid" class="form-control">
 
-					</c:otherwise>
-				</c:choose>
+					
           
                         
                     </div></div>       
                              </div>
                <br>
-                <div class="row">
-                <div class="form-group">
-                <div class="col-md-2">
-                    <label for="email">PRODUCT NAME</label></div>
-                    <div class="col-md-6">
-                    
-                        <input type="text" id="email" name="pdtname" class="form-control"></div>
-
-                    
-                </div>
-                </div>
+                
                <br>
                <div class="row">
                 <div class="form-group">
                 <div class="col-md-2">
-                    <label for="password" >PRODUCT DESCRIPTION</label></div>
+                    <label for="password" >AGE GROUP</label></div>
                     <div class="col-md-6">
-                        <input type="text" id="pw" name="pdtdes"  class="form-control"/>
+                        <input type="text" id="pw" name="agegrp"  class="form-control"/>
 </div></div>
                     
                 </div><br><br>
+                 <div class="row">
+                <div class="form-group">
+                <div class="col-md-2">
+                    <label for="password" >BRAND</label></div>
+                    <div class="col-md-6">
+                        <input type="text" id="pw" name="brand"  class="form-control"/>
+</div></div>
+                    
+                </div><br><br>
+                 <div class="row">
+                <div class="form-group">
+                <div class="col-md-2">
+                    <label for="password" >MATERIAL</label></div>
+                    <div class="col-md-6">
+                        <input type="text" id="pw" name="material"  class="form-control"/>
+</div></div>
+                    
+                </div><br><br><div class="row">
+                <div class="form-group">
+                <div class="col-md-2">
+                    <label for="email">PRICE</label></div>
+                    <div class="col-md-6">
+                    
+                        <input type="text" id="email" name="price" class="form-control"></div>
+
+                    
+                </div>
+                </div>
                               <div class="row">
                
                 <div class="form-group">

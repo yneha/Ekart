@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -30,34 +31,37 @@
 </head>
 <body>
 <br>
-<br><br>
-<br>
-<br>
-<br><br><br>
-Detailed Information of The desired Product
-<h2>${list}</h2>
 <div class="container">
-<table width="50%" class="table table-hover">
-	<tr>
-	    <th align="left">S.No</th>
-		<th align="left">Id</th>
-		<th align="left">AgeGroup</th>
+<br><br><br>
+<h3><center>Detailed Information of The desired Product</center></h3>
+<br>
+<table class="table table-hover">
+<thead>
+<tr><th align="left">Id</th>
+		<th align="left">Age Group</th>
 		<th align="left">Brand</th>
 		<th align="left">Material</th>
-		<th align="left">Price</th>
-		
-	</tr>
-	<c:forEach items="${list}" var="category" varStatus="status">
+		<th align="left">Price(Rs.)</th>
+		</tr>
+		</thead>
+		<tbody>
 		<tr>
-			<td>${status.count}</td>
-			<td>${category.pdtid}</td>
-			<td>${category.agegrp}</td>
-			<td>${category.brand}</td>
-			<td>${category.material}</td>
-			<td>${category.price}</td>
-			</tr>
-			</c:forEach>
-			</table>
-			</div>
+		<td>${list.pdtid}</td>
+			<td>${list.agegrp}</td>
+			<td>${list.brand}</td>
+			<td>${list.material}</td>
+			<td>${list.price}</td>
+			</tr></tbody>
+</table>
+</div>
+<div class="container" >
+           
+<form:form action="addcat" method="post">
+	 <div class="form-group">	
+        <button type="submit" class="btn btn-success">ADD A NEW PRODUCT INTO THE LIST</button>
+      </div>
+           </form:form>
+                    </div><br>
+
 </body>
 </html>

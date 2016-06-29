@@ -44,6 +44,8 @@ public class LoginController {
 	{
 		return "addcat";
 	}
+	
+	
 	@RequestMapping("/index")
 	public String gotowelcome() {
 		return "index";

@@ -20,7 +20,10 @@ public class Product {
     @Column(name = "pdtid",unique=true, nullable = false)
 	private String pdtid;
 	private String pdtname;
+
 	private String pdtdes;
+	
+		
 	
 		public String getPdtid() {
 		return pdtid;

@@ -28,14 +28,16 @@ public class App
 		context.refresh();
 		
 		App app= new App();
-		pdtdao.delete("rem");
+		pdtdao.delete("Ted");
 		pdtdao.get("C_1");
 		
 		Product pdt=new Product();
 		pdt.setPdtid("Ted");
 		pdt.setPdtname("TeddyBear");
 		pdt.setPdtdes("Teddy is cute");
+		
 		pdtdao.update(pdt);
+		
 		
 		app.print();
 		

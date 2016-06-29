@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
@@ -66,6 +66,7 @@ t2 {
 
 		</nav>
 	</div>
+	<h1></h1>
 	<center>	<h2>ADD PRODUCT INFORMATION</h2></center>
 	<div class="container">
 	<form:form action="addCategory" method="post">
@@ -73,8 +74,22 @@ t2 {
 		 <div class="form-group">
 		 <div class="col-md-2">
                     <label for="id" >PRODUCT ID</label>
-</div><div class="col-md-6">                    
-                        <input type="text" id="id"  name="pdtid" class="form-control">
+</div><div class="col-md-6">          
+<c:choose>
+				<c:when test="!empty ${key}">
+<input type="text" id="id"  name="pdtid" class="form-control" 
+disabled="true" readonly="true" />
+					
+					</c:when>
+
+					<c:otherwise>
+<input type="text" id="id" 
+name="pdtid" class="form-control">
+
+					</c:otherwise>
+				</c:choose>
+          
+                        
                     </div></div>       
                              </div>
                <br>

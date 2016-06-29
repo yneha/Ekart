@@ -15,6 +15,13 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <title>FUNTASTIC TOYS-Welcome</title>
 <style>
+t1 {
+	padding-left: 1em;
+}
+t2 {
+	padding-left: 30em;
+}
+
 .navbar-default {
 	background-color: #76448A;
 	color: black;
@@ -353,6 +360,57 @@
 			</div>
 		</div>
 	</div>
+	<hr>
+	<br>
+<div class="container">
+<div class="row">
+<div class="col-md-4"><h3>
+<a href="cart"><span class="glyphicon  glyphicon-map-marker	"></span>
+					 TRACK YOUR ORDER </a></h3></div>
+					<div class="col-md-4">
+					<h3><t1><a href="cart"><span class="glyphicon glyphicon-refresh"></span>
+					EASY RETURNS </a></t1></h3></div>
+					<div class="col-md-4">
+					<h3><a href="index"><span class="glyphicon glyphicon-remove-circle"></span>
+					CANCEL ORDER</a></h3>
+</div></div>
+<hr> <h6>Policies:<a href="#">Terms & Conditions</a>
+<a href="#">Privacy</a> <a href="#">Security</a>
+<t2>Connect With us:<a href="https://twitter.com/twitter" class="twitter-follow-button" data-show-count="false">Follow @twitter</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<a href="www.facebook.com">
+<img src="<c:url value="/resource/image/fb.jpg" />"></a></t2>
+</h6>
+<hr><h6>	<b style ="color:#C0C0C0;">Online shopping India</b>
+<p style ="color:#C0C0C0;">
+Imagine you are in dire need of new toy for your kid and have to get them before 
+the weekend. Are you willing to take a day off from work just to
+ go hunting for a pair in the crowded malls, foraging through 
+ endless shops for the right designs and color options? 
+ Will you wait in never-ending queues in front of the billing counter? 
+ Oh, and are you willing to pay the MRP for something that you could get 
+ for less? Are you willing to face so many hardships 
+ just for a toy?
+  Or do you want to sit in your air-conditioned office, work diligently on
+   your projects, impress your seniors, and during the
+    coffee break, browse through the massive selection of TOYS on Funtastic. 
+    See how easy shopping on Funtastic is!
+     
+    Just wish for something and we will deliver.
+</p>
 
+<b style ="color:#C0C0C0;">The new age of gifting - Funtastic E-Gift Vouchers</b>
+<p style ="color:#C0C0C0;">
+Your relatives children's birthday and you don't know what you should get them.
+ You're not sure if they like learning toys or puzzles.
+  We understand that people often find themselves in such situations, 
+  and that's why we have Funtastic E-Gift Vouchers. 
+  Instead of getting a gift of your choice and finding out 
+  later that they already had it, or just didn't like it as 
+  much as you thought, you could just give them these vouchers
+   that they can redeem on our site.
+    That way, they will be able to buy exactly what they need.
+</p>
+	</h6>
+	</div>
 </body>
 </html>

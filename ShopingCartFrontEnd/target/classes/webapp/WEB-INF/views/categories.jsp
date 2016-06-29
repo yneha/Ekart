@@ -33,6 +33,18 @@
 		
 	});
 </script>
+<script type="text/javascript">
+ function myFunction() {
+	 {
+	      var x = confirm("Are you sure you want to delete?");
+	      if (x)
+	          return true;
+	      else
+	        return false;
+	    }
+    
+}
+</script>
 <style>
 t1 {
 	padding-left: 10em;
@@ -112,17 +124,14 @@ t1 {
            
    <t1>        <button type="submit" class="btn btn-success">ADD A NEW PRODUCT INTO THE LIST</button></t1></div>
            </form:form>
-           
-          
-    
-              
-              </div><br>
+                    </div><br>
 	
 		<center><h3>LIST OF AVAILABE CATEGORIES</h3></center>
 		<br>
 		
 	<center>${op}</center>
 	<br>
+	<c:if test="${!empty list}">
 	<div class="container">
 <table width="50%" class="table table-hover">
 	<tr>
@@ -143,7 +152,7 @@ t1 {
 			<td>${category.pdtdes}</td>
 			<td><a href="info?key=${category.pdtid}"><span class="glyphicon glyphicon-info-sign"></span></a>
 			<td>
-            <form:form action="updatepdt" method="post">
+            <form:form action="addcat?key=${category.pdtid}" method="post">
         <div class="form-group">	
         
            <button type="submit" class="btn btn-success">UPDATE PRODUCT</button></div>
@@ -153,12 +162,12 @@ t1 {
  <form:form action="deletepdt?key=${category.pdtid}" method="post" >
         <div class="form-group">	
         
-        <button type="submit" class="btn btn-danger">DELETE PRODUCT</button></div>
+       <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE PRODUCT</button></div>
                  
 			 </form:form></td>
 		</tr>
 	</c:forEach>
-</table></div>
+</table></div></c:if>
   
               
   

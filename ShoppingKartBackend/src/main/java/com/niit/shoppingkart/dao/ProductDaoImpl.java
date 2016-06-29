@@ -70,7 +70,8 @@ public class ProductDaoImpl implements ProductDao{
 
 	@Transactional
 	public void delete(String pdtid) {
-		System.out.println(pdtid);
+		
+			
 		Product pdtdelete=new Product();
 		pdtdelete.setPdtid(pdtid);
 		sessionFactory.getCurrentSession().delete(pdtdelete);
