@@ -2,7 +2,11 @@ package com.niit.shoppingkart.bean;
 
 import java.io.Serializable;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
@@ -11,6 +15,9 @@ import javax.persistence.Id;
 public class Product {
 
 	@Id
+	
+    @Basic(optional = false)
+    @Column(name = "pdtid",unique=true, nullable = false)
 	private String pdtid;
 	private String pdtname;
 	private String pdtdes;

@@ -39,7 +39,11 @@ public class LoginController {
 		mv.addObject("userid", userid);
 		return mv;
 	}
-
+	@RequestMapping("/addcat")
+	public String gotoaddcat()
+	{
+		return "addcat";
+	}
 	@RequestMapping("/index")
 	public String gotowelcome() {
 		return "index";

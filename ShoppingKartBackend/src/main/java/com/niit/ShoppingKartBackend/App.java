@@ -29,7 +29,7 @@ public class App
 		
 		App app= new App();
 		pdtdao.delete("rem");
-		pdtdao.get("rems");
+		pdtdao.get("C_1");
 		
 		Product pdt=new Product();
 		pdt.setPdtid("Ted");

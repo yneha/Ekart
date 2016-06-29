@@ -15,8 +15,14 @@ import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.niit.shoppingkart.bean.Product;
+import com.niit.shoppingkart.bean.ProductInfo;
+import com.niit.shoppingkart.bean.User;
 import com.niit.shoppingkart.dao.ProductDao;
 import com.niit.shoppingkart.dao.ProductDaoImpl;
+import com.niit.shoppingkart.dao.ProductInfoDao;
+import com.niit.shoppingkart.dao.ProductInfoDaoImpl;
+import com.niit.shoppingkart.dao.UserDAO;
+import com.niit.shoppingkart.dao.UserDAOImpl;
 
 @Configuration
 @ComponentScan("com.niit.shoppingkart.bean")
@@ -54,6 +60,8 @@ public class ApplicationContextConfig
     	LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
     	sessionBuilder.addProperties(getHibernateProperties());
     	sessionBuilder.addAnnotatedClasses(Product.class);
+    	sessionBuilder.addAnnotatedClasses(User.class);
+    	sessionBuilder.addAnnotatedClasses(ProductInfo.class);
     	return sessionBuilder.buildSessionFactory();
     }
     
@@ -68,10 +76,20 @@ public class ApplicationContextConfig
 		return transactionManager;
 	}
     
+	@Autowired
+	@Bean(name="Userdao")
+	public UserDAO getUserDAO(SessionFactory sessionFactory) {
+    	return new UserDAOImpl(sessionFactory);
+    }
+	
     @Autowired
     @Bean(name = "ProductDao")
     public ProductDao getProductDao(SessionFactory sessionFactory) {
     	return new ProductDaoImpl(sessionFactory);
     }
-	
+    @Autowired
+    @Bean(name = "ProductInfoDao")
+    public ProductInfoDao getProductInfoDao(SessionFactory sessionFactory) {
+    	return new ProductInfoDaoImpl(sessionFactory);
+    }
 	}
