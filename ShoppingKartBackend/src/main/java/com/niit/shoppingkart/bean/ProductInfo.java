@@ -3,6 +3,8 @@ package com.niit.shoppingkart.bean;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
@@ -13,14 +15,22 @@ import javax.persistence.Id;
 	public class ProductInfo {
 
 		@Id
-		
+		@GeneratedValue(strategy=GenerationType.AUTO)
 	    @Basic(optional = false)
 	    @Column(name = "pdtid",unique=true, nullable = false)
-		private String pdtid;
-		public String getPdtid() {
+		private int pdtid;
+		private String name;
+		
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public int getPdtid() {
 			return pdtid;
 		}
-		public void setPdtid(String pdtid) {
+		public void setPdtid(int pdtid) {
 			this.pdtid = pdtid;
 		}
 		public String getBrand() {
@@ -35,22 +45,22 @@ import javax.persistence.Id;
 		public void setMaterial(String material) {
 			this.material = material;
 		}
-		public String getPrice() {
+		public int getPrice() {
 			return price;
 		}
-		public void setPrice(String price) {
+		public void setPrice(int price) {
 			this.price = price;
 		}
-		public String getAgegrp() {
+		public int getAgegrp() {
 			return agegrp;
 		}
-		public void setAgegrp(String agegrp) {
+		public void setAgegrp(int agegrp) {
 			this.agegrp = agegrp;
 		}
 		private String brand;
 		private String material;
-		private String price;
-		private String agegrp;
+		private int price;
+		private int agegrp;
 
 
 }

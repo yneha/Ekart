@@ -53,10 +53,17 @@ public class CategoryControllerf {
 		System.out.println(catlist);
 		return mv;
 	 }
-	
+	@RequestMapping("/products")
+	public ModelAndView getallpdt() {
+		List<ProductInfo> catlist = pdtinfo.list();
+				ModelAndView mv = new ModelAndView("/products");
+				
+				mv.addObject("list", catlist);
+				return mv;
+	}
 	@RequestMapping("/deletepdt")
 
-	public ModelAndView deleteCategory(@RequestParam("key") String id) {
+	public ModelAndView deleteCategory(@RequestParam("key") int id) {
 		System.out.println(id);
 		catdao.delete(id);
 	  String op;
@@ -70,7 +77,7 @@ public class CategoryControllerf {
 	 }
 	
 	@RequestMapping("/info")
-	public ModelAndView getallinfo(@RequestParam("key") String id) {
+	public ModelAndView getallinfo(@RequestParam("key") int id) {
 
 			System.out.println("hello");System.out.println(pdtinfo);
 			ProductInfo catlist = pdtinfo.get(id);

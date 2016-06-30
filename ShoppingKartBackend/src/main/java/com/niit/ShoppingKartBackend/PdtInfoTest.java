@@ -28,14 +28,13 @@ public class PdtInfoTest {
 		PdtInfoTest p=new PdtInfoTest();
 		
 		ProductInfo user =new ProductInfo();
-		user.setPdtid("CAT");
-		user.setBrand("Funskool");
-		user.setMaterial("Board");
-		user.setAgegrp("five");
-		user.setPrice("six hundred");
-		
+		user.setName("Monopoly for children");
+		user.setAgegrp(5);
+		user.setBrand("Monopoly");
+		user.setMaterial("Board Game");
+		user.setPrice(560);
 		ProductInfoDao.update(user);
-		ProductInfoDao.get("C_1");
+		
 		p.print();
     }
     public void print()
@@ -45,7 +44,7 @@ public class PdtInfoTest {
 		a=ProductInfoDao.list();
 		for( ProductInfo  c : a)
 			{
-			System.out.println( c.getPdtid() + ":" + c.getBrand() +":" +c.getMaterial()+":"+c.getAgegrp()+":"+c.getPrice()) ;
+			System.out.println( c.getPdtid() + ":" + c.getBrand() +":"+c.getName()+":" +c.getMaterial()+":"+c.getAgegrp()+":"+c.getPrice()) ;
 			}
     }
 }

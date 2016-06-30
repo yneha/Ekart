@@ -23,7 +23,7 @@
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 
-<title>FUNTASTIC TOYS-Categories</title>
+<title>FUNTASTIC TOYS-Products</title>
 
 
 <script>
@@ -95,6 +95,7 @@ t1 {
 					<li><a href="brand" style="color: black">Brands</a></li>
 					<li><a href="char" style="color: black">Character</a></li>
 					<li><a href="categories" style="color: black">Category</a></li>
+					<li><a href="products" style="color: black">Products</a></li>
 				</ul></li>
 			<li><a href="helpline">Contact</a></li>
 			<li><a href="gift">Gift Vouchers</a></li>
@@ -126,7 +127,7 @@ t1 {
            </form:form>
                     </div><br>
 	
-		<center><h3>LIST OF AVAILABE CATEGORIES</h3></center>
+		<center><h3>LIST OF AVAILABE PRODUCTS</h3></center>
 		<br>
 		
 	<center>${op}</center>
@@ -138,33 +139,24 @@ t1 {
 	    <th align="left">S.No</th>
 		<th align="left">Id</th>
 		<th align="left">Name</th>
-		<th align="left">Description</th>
-		<th align="left">Information</th>
-		<th align="left">DELETE</th>
-		<th align="left">UPDATE</th>
+		<th align="left">Age Group</th>
+		<th align="left">Brand</th>
+		<th align="left">Material</th>
+		<th align="left">Price(Rs.)</th>
+	
 		
 	</tr>
-	<c:forEach items="${list}" var="category" varStatus="status">
+	<c:forEach items="${list}" var="product" varStatus="status">
 		<tr>
 			<td>${status.count}</td>
-			<td>${category.pdtid}</td>
-			<td>${category.pdtname}</td>
-			<td>${category.pdtdes}</td>
-			<td><a href="info?key=${category.pdtid}"><span class="glyphicon glyphicon-info-sign"></span></a>
-			<td>
-            <form:form action="addcat?key=${category.pdtid}" method="post">
-        <div class="form-group">	
-        
-           <button type="submit" class="btn btn-success">UPDATE PRODUCT</button></div>
-  </form:form></td>
-  <td>
-        
- <form:form action="deletepdt?key=${category.pdtid}" method="post" >
-        <div class="form-group">	
-        
-       <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE PRODUCT</button></div>
-                 
-			 </form:form></td>
+			<td>${product.pdtid}</td>
+			<td>${product.name}</td>
+			<td>${product.agegrp}</td>
+			<td>${product.brand}</td>
+			<td>${product.material}</td>
+			<td>${product.price}</td>
+			
+			
 		</tr>
 	</c:forEach>
 </table></div></c:if>

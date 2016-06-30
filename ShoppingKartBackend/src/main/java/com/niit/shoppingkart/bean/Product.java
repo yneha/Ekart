@@ -14,34 +14,44 @@ import javax.persistence.Id;
 
 public class Product {
 
+	
 	@Id
-	
-    @Basic(optional = false)
-    @Column(name = "pdtid",unique=true, nullable = false)
-	private String pdtid;
-	private String pdtname;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int catid;
+   
+	public int getPdtid() {
+		return catid;
+	}
+	public void setPdtid(int pdtid) {
+		this.catid = pdtid;
+	}
+	private String catname;
 
-	private String pdtdes;
 	
-		
 	
-		public String getPdtid() {
-		return pdtid;
+	private int stock;
+	
+	private int tot_val;
+	
+	public String getCatname() {
+		return catname;
 	}
-	public void setPdtid(String pdtid) {
-		this.pdtid = pdtid;
+	public void setCatname(String catname) {
+		this.catname = catname;
 	}
-	public String getPdtname() {
-		return pdtname;
+	
+	public int getStock() {
+		return stock;
 	}
-	public void setPdtname(String pdtname) {
-		this.pdtname = pdtname;
+	public void setStock(int stock) {
+		this.stock = stock;
 	}
-	public String getPdtdes() {
-		return pdtdes;
+	public int getTot_val() {
+		return tot_val;
 	}
-	public void setPdtdes(String pdtdes) {
-		this.pdtdes = pdtdes;
+	public void setTot_val(int tot_val) {
+		this.tot_val = tot_val;
 	}
+	
 	
 }

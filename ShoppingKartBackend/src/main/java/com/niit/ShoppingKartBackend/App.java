@@ -28,17 +28,15 @@ public class App
 		context.refresh();
 		
 		App app= new App();
-		pdtdao.delete("Ted");
-		pdtdao.get("C_1");
-		
+
+
+       
 		Product pdt=new Product();
-		pdt.setPdtid("Ted");
-		pdt.setPdtname("TeddyBear");
-		pdt.setPdtdes("Teddy is cute");
 		
+		pdt.setCatname("Character Toys");
+		pdt.setStock(100);
+		pdt.setTot_val(50000); 
 		pdtdao.update(pdt);
-		
-		
 		app.print();
 		
 		
@@ -54,7 +52,7 @@ public class App
 		a=pdtdao.list();
 		for( Product c : a)
 			{
-				System.out.println(c.getPdtid() + ":"+ c.getPdtname() +":"+  c.getPdtdes()) ;
+				System.out.println(c.getPdtid() +":"+c.getStock()+":"+ c.getTot_val()+":"+ c.getCatname()) ;
 			}
     }
     

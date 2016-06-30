@@ -119,7 +119,7 @@ t1 {
 		<br><br>
 <div class="container" >
            
-<form:form action="addcat" method="post">
+<form:form action="addcat?key=0" method="post">
 	 <div class="form-group">	
            
    <t1>        <button type="submit" class="btn btn-success">ADD A NEW PRODUCT INTO THE LIST</button></t1></div>

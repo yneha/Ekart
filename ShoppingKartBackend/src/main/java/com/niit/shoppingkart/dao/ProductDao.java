@@ -9,8 +9,8 @@ import com.niit.shoppingkart.bean.Product;
 public interface ProductDao {
 
 	public List<Product> list();
-	public Product get(String pdtid);
+	public Product get(int catid);
 	public void update(Product pdt);
-	public void delete(String id);
+	public void delete(int catid);
 	
 }

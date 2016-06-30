@@ -90,7 +90,7 @@ t2 {
                 <div class="form-group">
                     <label for="password" class="col-sm-3 control-label">Password</label>
                     <div class="col-sm-6">
-                        <input type="text" id="pw" name=password  class="form-control">
+                        <input type="password" id="pw" name=password  class="form-control">
 
                     </div>
                 </div>

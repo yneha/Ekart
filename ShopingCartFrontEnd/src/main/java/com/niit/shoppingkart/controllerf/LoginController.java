@@ -24,6 +24,11 @@ public class LoginController {
 		return "welcome";
 	}
 
+	@RequestMapping("/welcome")
+	public String gotoinex() {
+		return "welcome";
+	}
+
 	@RequestMapping("/isValid")
 	public ModelAndView show(@RequestParam(value = "userid") String userid,
 			@RequestParam(value = "password") String password) {
@@ -40,9 +45,12 @@ public class LoginController {
 		return mv;
 	}
 	@RequestMapping("/addcat")
-	public String gotoaddcat()
+	public ModelAndView addcat(@RequestParam("key") String id) 
 	{
-		return "addcat";
+		System.out.println(id);
+		ModelAndView mv=new ModelAndView("addcat");
+		mv.addObject("id", id);
+		return mv;
 	}
 	
 	

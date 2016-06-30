@@ -12,10 +12,7 @@ public class Usertest
 	{
 		static AnnotationConfigApplicationContext context;
 		static UserDAO userdao;
-		public Usertest()
-		{
-			 userdao =  (UserDAO) context.getBean("Userdao");
-		}
+		
 	    @SuppressWarnings("unchecked")
 		public static void main( String[] args )
 	    {
@@ -26,24 +23,14 @@ public class Usertest
 			
 			context.refresh();
 			
-			Usertest u=new Usertest();
-			
-			
-			User user =new User();
-			user.setEmail("NIIT");
-			user.setPassword("NIIT");
-			user.setId( 5);
-			
-		
-			
-			userdao.saveOrUpdate(user);
+			userdao =  (UserDAO) context.getBean("Userdao");
 			
 			
 			List<User> a=new ArrayList<User>();
 			a=userdao.list();
 			for( User c : a)
 				{
-					System.out.println( c.getEmail() + ":" + c.getId() +":" +c.getPassword()) ;
+					System.out.println( c.getId()+":"+c.getName()+":"+c.getPassword()+":"+c.getAddr()+":"+c.getPhno()+":"+c.getEmail()) ;
 				}
 	    }
 	 

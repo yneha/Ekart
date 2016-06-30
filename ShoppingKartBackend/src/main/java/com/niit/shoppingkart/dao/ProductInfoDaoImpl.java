@@ -8,7 +8,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.shoppingkart.bean.Product;
 import com.niit.shoppingkart.bean.ProductInfo;
 
 
@@ -34,7 +36,7 @@ public class ProductInfoDaoImpl implements ProductInfoDao{
 		
 	}
 
-	public ProductInfo get(String pdtid) {
+	public ProductInfo get(int pdtid) {
 		Criteria c=sessionFactory.openSession().createCriteria(ProductInfo.class);
 		c.add(Restrictions.eq("pdtid", pdtid));
 		
@@ -56,6 +58,16 @@ public class ProductInfoDaoImpl implements ProductInfoDao{
 		Session s= sessionFactory.openSession();
 		s.saveOrUpdate(pdt);
 		s.flush();
+		
+	}
+	@Transactional
+	public void delete(int pdtid) {
+		
+			
+		Product pdtdelete=new Product();
+		pdtdelete.setPdtid(pdtid);
+		sessionFactory.getCurrentSession().delete(pdtdelete);
+			
 		
 	}
 

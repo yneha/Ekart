@@ -56,7 +56,7 @@
 </div>
 <div class="container" >
            
-<form:form action="addcat" method="post">
+<form:form action="addpdt" method="post">
 	 <div class="form-group">	
         <button type="submit" class="btn btn-success">ADD A NEW PRODUCT INTO THE LIST</button>
       </div>

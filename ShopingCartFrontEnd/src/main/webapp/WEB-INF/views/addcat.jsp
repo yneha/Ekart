@@ -75,20 +75,20 @@ t2 {
 		 <div class="col-md-2">
                     <label for="id" >PRODUCT ID</label>
 </div><div class="col-md-6">          
-<c:choose>
-				<c:when test="!empty ${key}">
-<input type="text" id="id"  name="pdtid" class="form-control" 
-disabled="true" readonly="true" />
-					
-					</c:when>
 
-					<c:otherwise>
+				<c:if test="${id ne '0'}">
+				
+<input type="text" id="id"  name="pdtid" class="form-control" 
+disabled="true" readonly="true" value="${id}"/>
+					
+					</c:if>
+
+	<c:if test="${id eq '0'}">
+				
 <input type="text" id="id" 
 name="pdtid" class="form-control">
 
-					</c:otherwise>
-				</c:choose>
-          
+					</c:if>
                         
                     </div></div>       
                              </div>

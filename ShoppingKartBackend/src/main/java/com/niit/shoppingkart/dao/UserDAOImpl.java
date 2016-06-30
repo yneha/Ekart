@@ -7,10 +7,12 @@ package com.niit.shoppingkart.dao;
 	import org.hibernate.Criteria;
 	import org.hibernate.Query;
 	import org.hibernate.SessionFactory;
-	import org.springframework.beans.factory.annotation.Autowired;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
 	import org.springframework.stereotype.Repository;
 	import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.shoppingkart.bean.Product;
 import com.niit.shoppingkart.bean.User;
 
 	
@@ -41,9 +43,9 @@ import com.niit.shoppingkart.bean.User;
 		
 
 		@Transactional
-		public void delete(String email) {
+		public void delete(String name) {
 			User user = new User();
-			user.setEmail(email);
+			user.setName(name);;
 			sessionFactory.getCurrentSession().delete(user);
 		}
 
@@ -54,9 +56,23 @@ import com.niit.shoppingkart.bean.User;
 			sessionFactory.getCurrentSession().saveOrUpdate(user);
 		}
 
-		public User get(String id) {
-			// TODO Auto-generated method stub
+		public User get(String name) {
+
+			Criteria c=sessionFactory.openSession().createCriteria(User.class);
+			c.add(Restrictions.eq("name", name));
+			
+					
+			
+			@SuppressWarnings("unchecked")
+			List<User> pdtlist=(List<User>)c.list();
+			if(pdtlist!= null && !pdtlist.isEmpty())
+			{
+				return pdtlist.get(0);
+			}
+			else
+			{
 			return null;
+			}
 		}
 		
 			

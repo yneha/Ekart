@@ -14,12 +14,12 @@ import com.niit.shoppingkart.bean.User;
 
 		public List<User> list();
 
-		public User get(String id);
+		public User get(String name);
 
 		public void saveOrUpdate(User user);
 		
 		
-		public void delete(String id);
+		public void delete(String name);
 		
 		
 

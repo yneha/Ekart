@@ -15,8 +15,7 @@ import javax.persistence.Id;
 
 		private String email;
 		 @Id
-		   
-		   
+		 @GeneratedValue(strategy=GenerationType.AUTO)  		   
 		private int id;
 		public int getId() {
 			return id;
@@ -35,7 +34,27 @@ import javax.persistence.Id;
 			this.email = email;
 		}
 	
-		
+		private String name;
+		private String addr;
+		private int phno;
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public String getAddr() {
+			return addr;
+		}
+		public void setAddr(String addr) {
+			this.addr = addr;
+		}
+		public int getPhno() {
+			return phno;
+		}
+		public void setPhno(int phno) {
+			this.phno = phno;
+		}
 		public String getPassword() {
 			return password;
 		}

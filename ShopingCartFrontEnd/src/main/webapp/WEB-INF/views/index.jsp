@@ -39,7 +39,7 @@ t2 {
 		<nav class="navbar navbar-default">
 
 		<div class="navbar-header">
-			<a class="navbar-brand" href="Welcome.jsp"
+			<a class="navbar-brand" href="welcome"
 				style="font-family: Comic Sans MS; color: white">FUNTASTIC TOYS</a>
 		</div>
 		<ul class="nav navbar-nav">
