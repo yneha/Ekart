@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>ADD CATEGORY</title>
+<title>ADD SUPPLIER</title>
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script
@@ -67,75 +67,102 @@ t2 {
 		</nav>
 	</div>
 	<h1></h1>
-	<center>	<h2>ADD PRODUCT INFORMATION</h2></center>
+	<center><h2>
+	<c:if test="${id eq '0'}">ADD SUPPLIER INFORMATION
+	</c:if>
+	<c:if test="${id ne '0'}">EDIT SUPPLIER INFORMATION</c:if>
+	</h2></center>
 	<div class="container">
-	<form:form action="addPdt" method="post">
+	
 	<div class="row">
 		 <div class="form-group">
 		 <div class="col-md-2">
-                    <label for="id" >PRODUCT ID</label>
-<input type="text" id="id" disabled="true"
-name="pdtid" class="form-control">
- </div></div></div>
-               <br>
-              
-	<div class="row">
-		 <div class="form-group">
-		 <div class="col-md-2">
-                    <label for="id" >PRODUCT NAME</label>
+                    <label for="id" >SUPPLIER ID</label>
+</div><div class="col-md-6">          
+
+				<c:if test="${id ne '0'}">
+				
+<input type="text" id="id"  name="s_id" class="form-control" 
+disabled="true" readonly="true" value="${id}"/>
+					
+					</c:if>
+
+	<c:if test="${id eq '0'}">
+				
 <input type="text" id="id" 
-name="name" class="form-control">
- </div></div></div>
+name="s_id" disabled="true" class="form-control">
+
+					</c:if>
+                        
+                    </div></div>       
+                             </div>
                <br>
-               <div class="row">
+                <div class="row">
                 <div class="form-group">
                 <div class="col-md-2">
-                    <label for="password" >AGE GROUP</label></div>
-                    <div class="col-md-6">
-                        <input type="text" id="pw" name="agegrp"  class="form-control"/>
-</div></div>
-                    
-                </div><br><br>
-                 <div class="row">
-                <div class="form-group">
-                <div class="col-md-2">
-                    <label for="password" >BRAND</label></div>
-                    <div class="col-md-6">
-                        <input type="text" id="pw" name="brand"  class="form-control"/>
-</div></div>
-                    
-                </div><br><br>
-                 <div class="row">
-                <div class="form-group">
-                <div class="col-md-2">
-                    <label for="password" >MATERIAL</label></div>
-                    <div class="col-md-6">
-                        <input type="text" id="pw" name="material"  class="form-control"/>
-</div></div>
-                    
-                </div><br><br><div class="row">
-                <div class="form-group">
-                <div class="col-md-2">
-                    <label for="email">PRICE</label></div>
+                    <label for="email">SUPPLIER NAME</label></div>
                     <div class="col-md-6">
                     
-                        <input type="text" id="email" name="price" class="form-control"></div>
+                        <input type="text" id="email" name="s_name" class="form-control"></div>
 
                     
                 </div>
                 </div>
+               <br>
+               <div class="row">
+                <div class="form-group">
+                <div class="col-md-2">
+                    <label for="password" >STOCK</label></div>
+                    <div class="col-md-6">
+                        <input type="text" id="pw" name="s_stock"  class="form-control"/>
+</div></div>
+                    
+                </div><br><br>
+                 <div class="row">
+                <div class="form-group">
+                <div class="col-md-2">
+                    <label for="password" >TOTAL VALUE</label></div>
+                    <div class="col-md-6">
+                        <input type="text" id="pw" name="s_tot_val"  class="form-control"/>
+</div></div>
+                    
+                </div><br><br>
+                 <div class="row">
+                <div class="form-group">
+                <div class="col-md-2">
+                    <label for="password" >ADDRESS</label></div>
+                    <div class="col-md-6">
+                        <input type="text" id="pw" name="s_addr"  class="form-control"/>
+</div></div>
+                    
+                </div><br><br>
+
                               <div class="row">
                
                 <div class="form-group">
                     <div class="col-md-1">`
                     <t1>
-                        <button type="submit" class="btn btn-success">ADD</button>
+                    <c:if test="${id eq '0'}">
+<form:form action="addsup" method="post">                        
+                <button type="submit" class="btn btn-success">
+
+                ADD
+               
+                </button> </form:form> 
+                </c:if>
+                <c:if test="${id ne '0'}">
+<form:form action="updatesup" method="post">                        
+                <button type="submit" class="btn btn-success">
+
+                EDIT
+                 </button> </form:form> 
+                </c:if>
                     </t1></div>
                     <div class="col-md-1">
                     <t2><button type="reset" class="btn btn-danger">RESET</button>
                     </t2></div>
                 </div></div>
-            </form:form> <!-- /form -->
+           <!-- /form -->
         </div> <!-- ./container --></body>
 </html>
 

@@ -120,7 +120,7 @@ t1 {
 		<br><br>
 <div class="container" >
            
-<form:form action="addcat?key=0" method="post">
+<form:form action="addpdt?key=0" method="post">
 	 <div class="form-group">	
            
    <t1>        <button type="submit" class="btn btn-success">ADD A NEW PRODUCT INTO THE LIST</button></t1></div>
@@ -143,44 +143,40 @@ t1 {
 		<th align="left">Brand</th>
 		<th align="left">Material</th>
 		<th align="left">Price(Rs.)</th>
-		<th align="left">DELETE</th>
-		<th align="left">UPDATE</th>
+		<th>Update</th>
+		<th>Delete</th>
+	
 		
 	</tr>
 	<c:forEach items="${list}" var="product" varStatus="status">
 		<tr>
 			<td>${status.count}</td>
-			<td>${category.pdtid}</td>
-			<td>${category.name}</td>
-			<td>${category.agegrp}</td>
-			<td>${category.brand}</td>
-			<td>${category.material}</td>
-			<td>${category.price}</td>
-			
-			
-			<td><a href="info?key=${category.pdtid}"><span class="glyphicon glyphicon-info-sign"></span></a>
+			<td>${product.pdtid}</td>
+			<td>${product.name}</td>
+			<td>${product.agegrp}</td>
+			<td>${product.brand}</td>
+			<td>${product.material}</td>
+			<td>${product.price}</td>
 			<td>
-            <form:form action="addcat?key=${category.pdtid}" method="post">
+	    <form:form action="addcat?key=${product.pdtid}" method="post">
         <div class="form-group">	
         
            <button type="submit" class="btn btn-success">UPDATE PRODUCT</button></div>
   </form:form></td>
   <td>
         
- <form:form action="deletepdt?key=${category.pdtid}" method="post" >
+ <form:form action="deletepdt?key=${product.pdtid}" method="post" >
         <div class="form-group">	
         
        <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE PRODUCT</button></div>
                  
-			 </form:form></td>
+			 </form:form></td>		
+			
 		</tr>
 	</c:forEach>
 </table></div></c:if>
   
-              
-  
-
-
+    
 
 </body>
 </html>

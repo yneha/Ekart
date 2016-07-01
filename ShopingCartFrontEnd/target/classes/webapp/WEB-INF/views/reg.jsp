@@ -76,7 +76,16 @@ t2 {
                <div class="form-group">
                     <label for="id" class="col-sm-3 control-label">ID</label>
                     <div class="col-sm-6">
-                        <input type="text" id="id"  name="id" class="form-control">
+                        				
+<input type="text" id="id" 
+name="id" disabled="true" class="form-control">
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">NAME</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="pw" name="name"  class="form-control">
+
                     </div>
                 </div>
                 <div class="form-group">
@@ -91,6 +100,21 @@ t2 {
                     <label for="password" class="col-sm-3 control-label">Password</label>
                     <div class="col-sm-6">
                         <input type="password" id="pw" name=password  class="form-control">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="col-sm-3 control-label">Address</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="pw" name=addr  class="form-control">
+
+                    </div>
+                </div>
+               
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Phone Number</label>
+                    <div class="col-sm-6">
+                        <input type="text" id="pw" name="phno" class="form-control">
 
                     </div>
                 </div>

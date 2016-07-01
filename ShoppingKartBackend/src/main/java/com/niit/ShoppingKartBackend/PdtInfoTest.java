@@ -28,7 +28,7 @@ public class PdtInfoTest {
 		PdtInfoTest p=new PdtInfoTest();
 		
 		ProductInfo user =new ProductInfo();
-		user.setName("Monopoly for children");
+		user.setName("Mono children");
 		user.setAgegrp(5);
 		user.setBrand("Monopoly");
 		user.setMaterial("Board Game");

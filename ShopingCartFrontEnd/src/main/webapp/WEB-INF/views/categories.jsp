@@ -135,31 +135,31 @@ t1 {
 	<div class="container">
 <table width="50%" class="table table-hover">
 	<tr>
-	    <th align="left">S.No</th>
+
 		<th align="left">Id</th>
 		<th align="left">Name</th>
-		<th align="left">Description</th>
-		<th align="left">Information</th>
-		<th align="left">DELETE</th>
-		<th align="left">UPDATE</th>
+		<th align="left">Stock</th>
+		<th align="left">Total Value</th>
 		
+		<th align="left">UPDATE</th>
+		<th align="left">DELETE</th>
 	</tr>
-	<c:forEach items="${list}" var="category" varStatus="status">
+	<c:forEach items="${list}" var="category" >
 		<tr>
-			<td>${status.count}</td>
-			<td>${category.pdtid}</td>
-			<td>${category.pdtname}</td>
-			<td>${category.pdtdes}</td>
-			<td><a href="info?key=${category.pdtid}"><span class="glyphicon glyphicon-info-sign"></span></a>
+			
+			<td>${category.catid}</td>
+			<td>${category.catname}</td>
+			<td>${category.stock}</td>
+			<td>${category.tot_val}</td>
 			<td>
-            <form:form action="addcat?key=${category.pdtid}" method="post">
+            <form:form action="addcat?key=${category.catid}" method="post">
         <div class="form-group">	
         
            <button type="submit" class="btn btn-success">UPDATE PRODUCT</button></div>
   </form:form></td>
   <td>
         
- <form:form action="deletepdt?key=${category.pdtid}" method="post" >
+ <form:form action="deletepdt?key=${category.catid}" method="post" >
         <div class="form-group">	
         
        <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE PRODUCT</button></div>

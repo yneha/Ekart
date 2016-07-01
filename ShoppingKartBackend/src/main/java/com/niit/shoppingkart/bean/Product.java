@@ -19,11 +19,12 @@ public class Product {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int catid;
    
-	public int getPdtid() {
+
+	public int getCatid() {
 		return catid;
 	}
-	public void setPdtid(int pdtid) {
-		this.catid = pdtid;
+	public void setCatid(int catid) {
+		this.catid = catid;
 	}
 	private String catname;
 

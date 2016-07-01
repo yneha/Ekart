@@ -74,18 +74,18 @@ t2 {
 		 <div class="form-group">
 		 <div class="col-md-2">
                     <label for="id" >PRODUCT ID</label>
-<
-
-<input type="text" id="id" 
+<input type="text" id="id" disabled="true"
 name="pdtid" class="form-control">
-
-					
-          
-                        
-                    </div></div>       
-                             </div>
+ </div></div></div>
                <br>
-                
+              
+	<div class="row">
+		 <div class="form-group">
+		 <div class="col-md-2">
+                    <label for="id" >PRODUCT NAME</label>
+<input type="text" id="id" 
+name="name" class="form-control">
+ </div></div></div>
                <br>
                <div class="row">
                 <div class="form-group">

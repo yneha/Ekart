@@ -67,18 +67,22 @@ t2 {
 		</nav>
 	</div>
 	<h1></h1>
-	<center>	<h2>ADD PRODUCT INFORMATION</h2></center>
+	<center><h2>
+	<c:if test="${id eq '0'}">ADD PRODUCT INFORMATION
+	</c:if>
+	<c:if test="${id ne '0'}">EDIT PRODUCT INFORMATION</c:if>
+	</h2></center>
 	<div class="container">
-	<form:form action="addCategory" method="post">
+	
 	<div class="row">
 		 <div class="form-group">
 		 <div class="col-md-2">
-                    <label for="id" >PRODUCT ID</label>
+                    <label for="id" >CATEGORY ID</label>
 </div><div class="col-md-6">          
 
 				<c:if test="${id ne '0'}">
 				
-<input type="text" id="id"  name="pdtid" class="form-control" 
+<input type="text" id="id"  name="catid" class="form-control" 
 disabled="true" readonly="true" value="${id}"/>
 					
 					</c:if>
@@ -86,7 +90,7 @@ disabled="true" readonly="true" value="${id}"/>
 	<c:if test="${id eq '0'}">
 				
 <input type="text" id="id" 
-name="pdtid" class="form-control">
+name="catid" disabled="true" class="form-control">
 
 					</c:if>
                         
@@ -96,10 +100,10 @@ name="pdtid" class="form-control">
                 <div class="row">
                 <div class="form-group">
                 <div class="col-md-2">
-                    <label for="email">PRODUCT NAME</label></div>
+                    <label for="email">CATEGORY NAME</label></div>
                     <div class="col-md-6">
                     
-                        <input type="text" id="email" name="pdtname" class="form-control"></div>
+                        <input type="text" id="email" name="catname" class="form-control"></div>
 
                     
                 </div>
@@ -108,9 +112,18 @@ name="pdtid" class="form-control">
                <div class="row">
                 <div class="form-group">
                 <div class="col-md-2">
-                    <label for="password" >PRODUCT DESCRIPTION</label></div>
+                    <label for="password" >STOCK</label></div>
                     <div class="col-md-6">
-                        <input type="text" id="pw" name="pdtdes"  class="form-control"/>
+                        <input type="text" id="pw" name="stock"  class="form-control"/>
+</div></div>
+                    
+                </div><br><br>
+                 <div class="row">
+                <div class="form-group">
+                <div class="col-md-2">
+                    <label for="password" >TOTAL VALUE</label></div>
+                    <div class="col-md-6">
+                        <input type="text" id="pw" name="tot_val"  class="form-control"/>
 </div></div>
                     
                 </div><br><br>
@@ -119,13 +132,27 @@ name="pdtid" class="form-control">
                 <div class="form-group">
                     <div class="col-md-1">`
                     <t1>
-                        <button type="submit" class="btn btn-success">ADD</button>
+                    <c:if test="${id eq '0'}">
+<form:form action="addCategory" method="post">                        
+                <button type="submit" class="btn btn-success">
+
+                ADD
+               
+                </button> </form:form> 
+                </c:if>
+                <c:if test="${id ne '0'}">
+<form:form action="updatecat" method="post">                        
+                <button type="submit" class="btn btn-success">
+
+                EDIT
+                 </button> </form:form> 
+                </c:if>
                     </t1></div>
                     <div class="col-md-1">
                     <t2><button type="reset" class="btn btn-danger">RESET</button>
                     </t2></div>
                 </div></div>
-            </form:form> <!-- /form -->
+           <!-- /form -->
         </div> <!-- ./container --></body>
 </html>
 

@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.niit.shoppingkart.bean.ProductInfo;
 import com.niit.shoppingkart.bean.Supplier;
 import com.niit.shoppingkart.dao.SupplierDao;
 
@@ -26,7 +27,13 @@ public class SupplierTest{
 		
 		SupplierTest p=new SupplierTest();
 		
+		Supplier s=new Supplier();
 		
+		s.setS_name("Monopoly for children");
+		s.setS_stock(5);
+		s.setS_addr("Monopoly");
+		s.setS_tot_val(560);
+		supdao.update(s);
 		
 		
 		p.print();

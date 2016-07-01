@@ -23,7 +23,7 @@
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 
-<title>FUNTASTIC TOYS-Products</title>
+<title>FUNTASTIC TOYS-Categories</title>
 
 
 <script>
@@ -95,7 +95,6 @@ t1 {
 					<li><a href="brand" style="color: black">Brands</a></li>
 					<li><a href="char" style="color: black">Character</a></li>
 					<li><a href="categories" style="color: black">Category</a></li>
-					<li><a href="products" style="color: black">Products</a></li>
 				</ul></li>
 			<li><a href="helpline">Contact</a></li>
 			<li><a href="gift">Gift Vouchers</a></li>
@@ -120,14 +119,14 @@ t1 {
 		<br><br>
 <div class="container" >
            
-<form:form action="addpdt?key=0" method="post">
+<form:form action="addsup?key=0" method="post">
 	 <div class="form-group">	
            
-   <t1>        <button type="submit" class="btn btn-success">ADD A NEW PRODUCT INTO THE LIST</button></t1></div>
+   <t1>        <button type="submit" class="btn btn-success">ADD A SUPPLIER INTO THE LIST</button></t1></div>
            </form:form>
                     </div><br>
 	
-		<center><h3>LIST OF AVAILABE PRODUCTS</h3></center>
+		<center><h3>LIST OF AVAILABE SUPPLIERS</h3></center>
 		<br>
 		
 	<center>${op}</center>
@@ -136,47 +135,45 @@ t1 {
 	<div class="container">
 <table width="50%" class="table table-hover">
 	<tr>
-	    <th align="left">S.No</th>
+
 		<th align="left">Id</th>
 		<th align="left">Name</th>
-		<th align="left">Age Group</th>
-		<th align="left">Brand</th>
-		<th align="left">Material</th>
-		<th align="left">Price(Rs.)</th>
-		<th>Update</th>
-		<th>Delete</th>
-	
-		
+		<th align="left">Stock</th>
+		<th align="left">Total Value</th>
+		<th align="left">Address</th>
+		<th align="left">UPDATE</th>
+		<th align="left">DELETE</th>
 	</tr>
-	<c:forEach items="${list}" var="product" varStatus="status">
+	<c:forEach items="${list}" var="category" >
 		<tr>
-			<td>${status.count}</td>
-			<td>${product.pdtid}</td>
-			<td>${product.name}</td>
-			<td>${product.agegrp}</td>
-			<td>${product.brand}</td>
-			<td>${product.material}</td>
-			<td>${product.price}</td>
+			
+			<td>${category.s_id}</td>
+			<td>${category.s_name}</td>
+			<td>${category.s_stock}</td>
+			<td>${category.s_tot_val}</td>
+			<td>${category.s_addr}</td>
 			<td>
-	    <form:form action="addcat?key=${product.pdtid}" method="post">
+            <form:form action="addsup?key=${category.s_id}" method="post">
         <div class="form-group">	
         
            <button type="submit" class="btn btn-success">UPDATE PRODUCT</button></div>
   </form:form></td>
   <td>
         
- <form:form action="deletepdt?key=${product.pdtid}" method="post" >
+ <form:form action="deletesup?key=${category.s_id}" method="post" >
         <div class="form-group">	
         
        <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE PRODUCT</button></div>
                  
-			 </form:form></td>		
-			
+			 </form:form></td>
 		</tr>
 	</c:forEach>
 </table></div></c:if>
   
-    
+              
+  
+
+
 
 </body>
 </html>

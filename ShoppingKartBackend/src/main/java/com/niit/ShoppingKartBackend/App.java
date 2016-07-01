@@ -32,11 +32,7 @@ public class App
 
        
 		Product pdt=new Product();
-		
-		pdt.setCatname("Character Toys");
-		pdt.setStock(100);
-		pdt.setTot_val(50000); 
-		pdtdao.update(pdt);
+	
 		app.print();
 		
 		
@@ -52,7 +48,7 @@ public class App
 		a=pdtdao.list();
 		for( Product c : a)
 			{
-				System.out.println(c.getPdtid() +":"+c.getStock()+":"+ c.getTot_val()+":"+ c.getCatname()) ;
+				System.out.println(c.getCatid() +":"+c.getStock()+":"+ c.getTot_val()+":"+ c.getCatname()) ;
 			}
     }
     

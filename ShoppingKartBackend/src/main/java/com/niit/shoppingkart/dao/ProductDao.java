@@ -10,6 +10,7 @@ public interface ProductDao {
 
 	public List<Product> list();
 	public Product get(int catid);
+	public void save(Product pdt);
 	public void update(Product pdt);
 	public void delete(int catid);
 	

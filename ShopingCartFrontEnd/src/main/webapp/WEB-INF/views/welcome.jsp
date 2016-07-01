@@ -79,6 +79,7 @@ t2 {
 					<li><a href="char" style="color: black">Character</a></li>
 					<li><a href="categories" style="color: black">Category</a></li>
 					<li><a href="products" style="color: black">Products</a></li>
+					<li><a href="suppliers" style="color: black">Suppliers</a></li>
 				</ul></li>
 			<li><a href="helpline">Contact</a></li>
 			<li><a href="gift">Gift Vouchers</a></li>

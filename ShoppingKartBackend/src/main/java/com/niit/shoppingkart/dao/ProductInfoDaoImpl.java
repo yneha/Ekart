@@ -64,7 +64,7 @@ public class ProductInfoDaoImpl implements ProductInfoDao{
 	public void delete(int pdtid) {
 		
 			
-		Product pdtdelete=new Product();
+		ProductInfo pdtdelete=new ProductInfo();
 		pdtdelete.setPdtid(pdtid);
 		sessionFactory.getCurrentSession().delete(pdtdelete);
 			

@@ -59,9 +59,15 @@ public class ProductDaoImpl implements ProductDao{
 	}
 
 	
-	
+	 
 	@Transactional
 	public void update(Product pdt) {
+		Session s= sessionFactory.openSession();
+		s.update(pdt);
+		s.flush();
+		
+	}
+	public void save(Product pdt) {
 		Session s= sessionFactory.openSession();
 		s.saveOrUpdate(pdt);
 		s.flush();
@@ -73,9 +79,11 @@ public class ProductDaoImpl implements ProductDao{
 		
 			
 		Product pdtdelete=new Product();
-		pdtdelete.setPdtid(catid);
+		pdtdelete.setCatid(catid);
 		sessionFactory.getCurrentSession().delete(pdtdelete);
 			
 		
 	}
+
+	
 	}
