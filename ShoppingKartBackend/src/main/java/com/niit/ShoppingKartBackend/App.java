@@ -33,10 +33,14 @@ public class App
        
 		Product pdt=new Product();
 	
+		
+		
+		pdt.setCatname("a");
+		pdt.setStock(2);
+		pdt.setTot_val(200);
+		pdtdao.save(pdt);
+		
 		app.print();
-		
-		
-	
 		
 		
     }

@@ -54,12 +54,12 @@
 			<scope>compile</scope>
 		</dependency>
 
+
 		<dependency>
 			<groupId>com.niit</groupId>
   <artifactId>ShoppingKartBackend</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
 
 	</dependencies>
 	<build>

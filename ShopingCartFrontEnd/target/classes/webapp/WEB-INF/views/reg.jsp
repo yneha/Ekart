@@ -73,14 +73,7 @@ t2 {
 <div class="container">
             <form:form class="form-horizontal" action="register" method="post" role="form">
                 <h2>Registration Form</h2>
-               <div class="form-group">
-                    <label for="id" class="col-sm-3 control-label">ID</label>
-                    <div class="col-sm-6">
-                        				
-<input type="text" id="id" 
-name="id" disabled="true" class="form-control">
-                    </div>
-                </div>
+              
                  <div class="form-group">
                     <label for="password" class="col-sm-3 control-label">NAME</label>
                     <div class="col-sm-6">

@@ -32,9 +32,13 @@ public class CategoryControllerf {
 
 	@RequestMapping("/addCategory")
 	public ModelAndView addCategory(@ModelAttribute Product category) {
+		
+	
+	
+		
 		System.out.println("save");
 		catdao.save(category);
-		ModelAndView mv=new ModelAndView("categories");
+		ModelAndView mv=new ModelAndView("/categories");
 		String op="ITEM IS ADDED";
 		mv.addObject("op", op);
 		List<Product> catlist = catdao.list();
@@ -104,9 +108,12 @@ public class CategoryControllerf {
 	
 	//PRODUCTSSSSSSSS
 @RequestMapping("/addpdt")
-	public String gotopdt()
-	{
-		return "addpdt";
+public ModelAndView addcat(@RequestParam("key") String id) 
+{
+	System.out.println(id);
+	ModelAndView mv=new ModelAndView("addpdt");
+	mv.addObject("id", id);
+	return mv;
 }
 	@RequestMapping("/addPdt")
 	public ModelAndView addpdt(@ModelAttribute ProductInfo category) {
@@ -164,10 +171,13 @@ public class CategoryControllerf {
 	//Suppplliierreerrrr
 	
 	@RequestMapping("/addsup")
-	public String gotosup()
+	public ModelAndView addsup(@RequestParam("key") String id) 
 	{
-		return "addsup";
-}
+		System.out.println(id);
+		ModelAndView mv=new ModelAndView("addsup");
+		mv.addObject("id", id);
+		return mv;
+	}
 	@RequestMapping("/addSup")
 	public ModelAndView addsup(@ModelAttribute Supplier category) {
 		supdao.update(category);

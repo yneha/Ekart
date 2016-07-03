@@ -158,14 +158,14 @@ t1 {
 			<td>${product.material}</td>
 			<td>${product.price}</td>
 			<td>
-	    <form:form action="addcat?key=${product.pdtid}" method="post">
+	    <form:form action="addpdt?key=${product.pdtid}" method="post">
         <div class="form-group">	
         
            <button type="submit" class="btn btn-success">UPDATE PRODUCT</button></div>
   </form:form></td>
   <td>
         
- <form:form action="deletepdt?key=${product.pdtid}" method="post" >
+ <form:form action="deleteproduct?key=${product.pdtid}" method="post" >
         <div class="form-group">	
         
        <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE PRODUCT</button></div>

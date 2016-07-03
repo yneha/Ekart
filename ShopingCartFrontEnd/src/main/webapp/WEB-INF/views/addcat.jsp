@@ -66,7 +66,7 @@ t2 {
 
 		</nav>
 	</div>
-	<h1></h1>
+	
 	<center><h2>
 	<c:if test="${id eq '0'}">ADD PRODUCT INFORMATION
 	</c:if>

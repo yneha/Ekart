@@ -156,14 +156,14 @@ t1 {
             <form:form action="addsup?key=${category.s_id}" method="post">
         <div class="form-group">	
         
-           <button type="submit" class="btn btn-success">UPDATE PRODUCT</button></div>
+           <button type="submit" class="btn btn-success">UPDATE SUPPLIER</button></div>
   </form:form></td>
   <td>
         
  <form:form action="deletesup?key=${category.s_id}" method="post" >
         <div class="form-group">	
         
-       <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE PRODUCT</button></div>
+       <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE SUPPLIER</button></div>
                  
 			 </form:form></td>
 		</tr>

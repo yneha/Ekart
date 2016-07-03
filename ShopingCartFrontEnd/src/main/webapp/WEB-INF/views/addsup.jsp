@@ -143,7 +143,7 @@ name="s_id" disabled="true" class="form-control">
                     <div class="col-md-1">`
                     <t1>
                     <c:if test="${id eq '0'}">
-<form:form action="addsup" method="post">                        
+<form:form action="addSup" method="post">                        
                 <button type="submit" class="btn btn-success">
 
                 ADD

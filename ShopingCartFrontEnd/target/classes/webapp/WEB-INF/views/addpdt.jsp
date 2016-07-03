@@ -67,26 +67,21 @@ t2 {
 		</nav>
 	</div>
 	<h1></h1>
-	<center>	<h2>ADD PRODUCT INFORMATION</h2></center>
+	<center>	<h2><c:if test="${id eq '0'}">ADD PRODUCT INFORMATION
+	</c:if>
+	<c:if test="${id ne '0'}">EDIT PRODUCT INFORMATION</c:if></h2></center>
 	<div class="container">
 	<form:form action="addPdt" method="post">
-	<div class="row">
-		 <div class="form-group">
-		 <div class="col-md-2">
-                    <label for="id" >PRODUCT ID</label>
-<input type="text" id="id" disabled="true"
-name="pdtid" class="form-control">
- </div></div></div>
+	
                <br>
-              
 	<div class="row">
 		 <div class="form-group">
 		 <div class="col-md-2">
-                    <label for="id" >PRODUCT NAME</label>
+                    <label for="id" >PRODUCT NAME</label></div><div class="col-md-6">
 <input type="text" id="id" 
 name="name" class="form-control">
  </div></div></div>
-               <br>
+               <br> <br> <br>
                <div class="row">
                 <div class="form-group">
                 <div class="col-md-2">
@@ -128,9 +123,23 @@ name="name" class="form-control">
                
                 <div class="form-group">
                     <div class="col-md-1">`
-                    <t1>
-                        <button type="submit" class="btn btn-success">ADD</button>
+                    <t1><c:if test="${id eq '0'}">
+<form:form action="addPdt" method="post">                        
+                <button type="submit" class="btn btn-success">
+
+                ADD
+               
+                </button> </form:form> 
+                </c:if>
+                <c:if test="${id ne '0'}">
+<form:form action="updatepdt" method="post">                        
+                <button type="submit" class="btn btn-success">
+
+                EDIT
+                 </button> </form:form> 
+                </c:if>
                     </t1></div>
+                       
                     <div class="col-md-1">
                     <t2><button type="reset" class="btn btn-danger">RESET</button>
                     </t2></div>
