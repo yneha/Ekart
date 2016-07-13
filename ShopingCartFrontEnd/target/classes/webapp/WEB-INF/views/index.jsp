@@ -75,7 +75,7 @@ t2 {
 				<label class="control-label col-sm-3" for="userid">USER ID:</label>
 				<div class="col-sm-3">
 					<input type="text" name="userid" class="form-control"
-						placeholder="Enter your ID" required pattern="[A-Za-z]+"
+						placeholder="Enter your Name" required pattern="[A-Za-z]+"
 						title="Only Alphabets">
 				</div>
 			</div>

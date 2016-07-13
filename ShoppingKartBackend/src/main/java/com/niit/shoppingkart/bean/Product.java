@@ -16,18 +16,17 @@ public class Product {
 
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int catid;
+	
+	private String catid;
    
-
-	public int getCatid() {
+private String del="f";
+	public String getCatid() {
 		return catid;
 	}
-	public void setCatid(int catid) {
+	public void setCatid(String catid) {
 		this.catid = catid;
 	}
 	private String catname;
-
 	
 	
 	private int stock;
@@ -53,6 +52,11 @@ public class Product {
 	public void setTot_val(int tot_val) {
 		this.tot_val = tot_val;
 	}
-	
-	
+	public String getDel() {
+		return del;
+	}
+	public void setDel(String del) {
+		this.del = del;
+	}
+		
 }

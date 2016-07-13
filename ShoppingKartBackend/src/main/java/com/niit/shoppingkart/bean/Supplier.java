@@ -8,18 +8,18 @@ import javax.persistence.Id;
 @Entity
 public class Supplier {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int s_id;
+	
+	private String s_id;
 	private String s_name;
 	private String s_addr;
 	private int s_stock;
 	private int s_tot_val;
 	
-	
-	public int getS_id() {
+	private String del="f";
+	public String getS_id() {
 		return s_id;
 	}
-	public void setS_id(int s_id) {
+	public void setS_id(String s_id) {
 		this.s_id = s_id;
 	}
 	public String getS_name() {
@@ -45,6 +45,12 @@ public class Supplier {
 	}
 	public void setS_tot_val(int s_tot_val) {
 		this.s_tot_val = s_tot_val;
+	}
+	public String getDel() {
+		return del;
+	}
+	public void setDel(String del) {
+		this.del = del;
 	}
 
 }

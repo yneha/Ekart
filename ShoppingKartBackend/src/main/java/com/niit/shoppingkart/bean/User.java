@@ -7,22 +7,29 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
 
 	@Entity
 	
 	
-	public class User {
+	public class User{
 
+		
 		private String email;
 		 @Id
 		 @GeneratedValue(strategy=GenerationType.AUTO)  		   
 		private int id;
-		public int getId() {
+		public int getId() 
+		{
 			return id;
 		}
 		public void setId(int id) {
 			this.id = id;
 		}
+		
 		private String password;
 	
 		
@@ -36,6 +43,7 @@ import javax.persistence.Id;
 	
 		private String name;
 		private String addr;
+	
 		private int phno;
 		public String getName() {
 			return name;

@@ -33,11 +33,12 @@
 <br>
 <div class="container">
 <br><br><br>
-<h3><center>Detailed Information of The desired Product</center></h3>
+<h3><center>Searched Information of The desired Product</center></h3>
 <br>
 <table class="table table-hover">
 <thead>
 <tr><th align="left">Id</th>
+<th align="left">Name</th>
 		<th align="left">Age Group</th>
 		<th align="left">Brand</th>
 		<th align="left">Material</th>
@@ -47,6 +48,7 @@
 		<tbody>
 		<tr>
 		<td>${list.pdtid}</td>
+		<td>${list.name}</td>
 			<td>${list.agegrp}</td>
 			<td>${list.brand}</td>
 			<td>${list.material}</td>

@@ -45,7 +45,7 @@ import com.niit.shoppingkart.bean.User;
 		@Transactional
 		public void delete(String name) {
 			User user = new User();
-			user.setName(name);;
+			user.setName(name);
 			sessionFactory.getCurrentSession().delete(user);
 		}
 
@@ -73,6 +73,22 @@ import com.niit.shoppingkart.bean.User;
 			{
 			return null;
 			}
+		}
+
+		public User check(String email) {
+			Criteria c=sessionFactory.openSession().createCriteria(User.class);
+			c.add(Restrictions.eq("email", email));
+			@SuppressWarnings("unchecked")
+			List<User> userl=(List<User>)c.list();
+			if(userl!= null && !userl.isEmpty())
+			{
+			return userl.get(0);
+			}
+			else 
+			{
+				return null;
+			}
+			
 		}
 		
 			

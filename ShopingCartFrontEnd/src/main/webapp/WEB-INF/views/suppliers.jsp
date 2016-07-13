@@ -119,7 +119,7 @@ t1 {
 		<br><br>
 <div class="container" >
            
-<form:form action="addsup?key=0" method="post">
+<form:form action="addsup" method="post">
 	 <div class="form-group">	
            
    <t1>        <button type="submit" class="btn btn-success">ADD A SUPPLIER INTO THE LIST</button></t1></div>
@@ -153,17 +153,17 @@ t1 {
 			<td>${category.s_tot_val}</td>
 			<td>${category.s_addr}</td>
 			<td>
-            <form:form action="addsup?key=${category.s_id}" method="post">
+            <form:form action="editsup?key=${category.s_id}" method="post">
         <div class="form-group">	
         
-           <button type="submit" class="btn btn-success">UPDATE PRODUCT</button></div>
+           <button type="submit" class="btn btn-success">UPDATE SUPPLIER</button></div>
   </form:form></td>
   <td>
         
  <form:form action="deletesup?key=${category.s_id}" method="post" >
         <div class="form-group">	
         
-       <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE PRODUCT</button></div>
+       <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE SUPPLIER</button></div>
                  
 			 </form:form></td>
 		</tr>

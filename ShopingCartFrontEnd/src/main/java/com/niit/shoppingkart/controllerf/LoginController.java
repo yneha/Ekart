@@ -19,6 +19,8 @@ public class LoginController {
 	UserDao userdao;
 	
 	
+	
+	
 	@RequestMapping("/")
 	public String gotoindex() {
 		return "welcome";
@@ -27,6 +29,14 @@ public class LoginController {
 	@RequestMapping("/welcome")
 	public String gotoinex() {
 		return "welcome";
+	}
+	@RequestMapping("/fav")
+	public String fav() {
+		return "fav";
+	}
+	@RequestMapping("/barbie")
+	public String gotobarb() {
+		return "barbie";
 	}
 
 	@RequestMapping("/isValid")
@@ -45,12 +55,8 @@ public class LoginController {
 		return mv;
 	}
 	@RequestMapping("/addcat")
-	public ModelAndView addcat(@RequestParam("key") String id) 
-	{
-		System.out.println(id);
-		ModelAndView mv=new ModelAndView("addcat");
-		mv.addObject("id", id);
-		return mv;
+	public String gotoaddcat() {
+		return "addcat";
 	}
 	
 	
@@ -84,10 +90,7 @@ public class LoginController {
 		return "helpline";
 	}
 
-	@RequestMapping("/reg")
-	public String gotoreg() {
-		return "reg";
-	}
+	
 	@RequestMapping("/gift")
 	public String gotogift() {
 		return "gift";

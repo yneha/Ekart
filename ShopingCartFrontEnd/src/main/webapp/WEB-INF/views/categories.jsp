@@ -7,14 +7,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-
- 
-<script
-	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link rel="stylesheet"
@@ -27,9 +22,21 @@
 
 
 <script>
+  $(function() {
+    var availableTags = [
+      "teddy","funskool","lego","a","ab"
+    ];
+    $( "#tag" ).autocomplete({
+      source: availableTags
+    });
+  });
+  </script>
+<script>
+
+var lis=${list}
 	var app = angular.module("myApp", []);
 	app.controller("myCtrl", function($scope) {
-		$scope.list = ${list};
+		$scope.list = lis;
 		
 	});
 </script>
@@ -46,6 +53,16 @@
 }
 </script>
 <style>
+
+.has-feedback-left input.form-control {
+	padding-left: 34px; /* @input-height-base; */
+	padding-right: 12px; /* @padding-base-horizontal */
+}
+
+.has-feedback-left .form-control-feedback {
+	left: 0;
+}
+
 t1 {
 	padding-left: 10em;
 }
@@ -55,6 +72,8 @@ t2 {
 t3 {
 	padding-left: 26em;
 }
+t4{
+padding-left:14em;}
 .has-feedback-left .form-control-feedback {
 	left: 0;
 }
@@ -79,7 +98,7 @@ t1 {
 }
 </style>
 </head>
-<body>
+<body ng-app="myApp" ng-ctrl="myCtrl">
 	<div class="container-fluid">
 		<nav class="navbar navbar-default">
 
@@ -114,25 +133,54 @@ t1 {
 		</nav>
 	</div>
 	
-
+	
+<div class="container">
+	<form:form action="searchcat" method="post">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3 ">
+				<div id="imaginary_container">
+					<div class="input-group stylish-input-group">
+						<div class="form-group has-feedback has-feedback-left">
+							<input type="text" name="cn" id="tag" class="form-control" placeholder="Search" />
+							<i class="glyphicon glyphicon-search form-control-feedback"></i>
+						</div>
+						<span class="input-group-addon">
+							<button type="submit">
+								<span class="glyphicon glyphicon-arrow-right"></span>
+							</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div></form:form>
+	</div>
+		
 		
 		<br><br>
 <div class="container" >
            
-<form:form action="addcat?key=0" method="post">
+<form:form action="addcat" method="post">
 	 <div class="form-group">	
            
    <t1>        <button type="submit" class="btn btn-success">ADD A NEW PRODUCT INTO THE LIST</button></t1></div>
            </form:form>
+           <form:form action="retrive" method="post">
+	 <div class="form-group">	
+           
+   <t4>        <button type="submit" class="btn btn-success">RETRIVE THE DELETED DATA </button></t4></div>
+           </form:form>
                     </div><br>
+	<br>
 	
+
 		<center><h3>LIST OF AVAILABE CATEGORIES</h3></center>
 		<br>
 		
 	<center>${op}</center>
+	
 	<br>
-	<c:if test="${!empty list}">
-	<div class="container">
+	
+	<div class="container" >
 <table width="50%" class="table table-hover">
 	<tr>
 
@@ -144,15 +192,16 @@ t1 {
 		<th align="left">UPDATE</th>
 		<th align="left">DELETE</th>
 	</tr>
-	<c:forEach items="${list}" var="category" >
+	
+		<c:forEach items="${list}" var="category" varStatus="status">
 		<tr>
-			
+		
 			<td>${category.catid}</td>
 			<td>${category.catname}</td>
 			<td>${category.stock}</td>
 			<td>${category.tot_val}</td>
 			<td>
-            <form:form action="addcat?key=${category.catid}" method="post">
+            <form:form action="editcat?key=${category.catid}" method="post">
         <div class="form-group">	
         
            <button type="submit" class="btn btn-success">UPDATE PRODUCT</button></div>
@@ -165,9 +214,8 @@ t1 {
        <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE PRODUCT</button></div>
                  
 			 </form:form></td>
-		</tr>
-	</c:forEach>
-</table></div></c:if>
+		</tr>	</c:forEach>
+</table></div>
   
               
   

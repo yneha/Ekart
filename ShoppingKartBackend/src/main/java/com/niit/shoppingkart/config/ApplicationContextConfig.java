@@ -18,6 +18,7 @@ import com.niit.shoppingkart.bean.Product;
 import com.niit.shoppingkart.bean.ProductInfo;
 import com.niit.shoppingkart.bean.Supplier;
 import com.niit.shoppingkart.bean.User;
+import com.niit.shoppingkart.bean.UserValidation;
 import com.niit.shoppingkart.dao.ProductDao;
 import com.niit.shoppingkart.dao.ProductDaoImpl;
 import com.niit.shoppingkart.dao.ProductInfoDao;
@@ -40,7 +41,7 @@ public class ApplicationContextConfig
 		
 			BasicDataSource datasource=new BasicDataSource();
 			datasource.setDriverClassName("org.h2.Driver");
-			datasource.setUrl("jdbc:h2:tcp://localhost/~/test");
+			datasource.setUrl("jdbc:h2:tcp://localhost/~/neha");
 			datasource.setUsername("sa");
 			datasource.setPassword("");
 		    return datasource;
@@ -101,5 +102,12 @@ public class ApplicationContextConfig
     @Bean(name = "SupplierDao")
     public SupplierDao getSupplierDao(SessionFactory sessionFactory) {
     	return new SupplierDaoImpl(sessionFactory);
-    } 
-	}
+    }
+    
+    @Autowired
+    @Bean(name="uservalid")
+    public UserValidation getuservalid()
+    {
+    	return new UserValidation();
+    }
+   }

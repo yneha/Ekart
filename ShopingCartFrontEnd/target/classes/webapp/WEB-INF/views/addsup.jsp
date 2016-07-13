@@ -68,42 +68,48 @@ t2 {
 	</div>
 	<h1></h1>
 	<center><h2>
-	<c:if test="${id eq '0'}">ADD SUPPLIER INFORMATION
+	<c:if test="${!empty category}">ADD SUPPLIER INFORMATION
 	</c:if>
-	<c:if test="${id ne '0'}">EDIT SUPPLIER INFORMATION</c:if>
+	<c:if test="${empty category}">EDIT SUPPLIER INFORMATION</c:if>
 	</h2></center>
+	<form:form action="addSup" method="post">
 	<div class="container">
 	
 	<div class="row">
-		 <div class="form-group">
-		 <div class="col-md-2">
-                    <label for="id" >SUPPLIER ID</label>
-</div><div class="col-md-6">          
+				<div class="form-group">
+					<div class="col-md-2">
+						<label for="id">CATEGORY ID</label>
+					</div>
+					<div class="col-md-6">
+	
+						<c:if test="${!empty category}">
 
-				<c:if test="${id ne '0'}">
-				
-<input type="text" id="id"  name="s_id" class="form-control" 
-disabled="true" readonly="true" value="${id}"/>
+						
+
+							<input type="text" id="id" name="catid" class="form-control"
+									readonly="true" value="${category.catid}" />
+
+						</c:if>
+							
+						<c:if test="${empty category}">
+						<input type="text" id="id" name="catid" class="form-control"
+							disabled="true"	hidden="true"	readonly="true"  />
+						
+						</c:if>
 					
-					</c:if>
 
-	<c:if test="${id eq '0'}">
-				
-<input type="text" id="id" 
-name="s_id" disabled="true" class="form-control">
-
-					</c:if>
-                        
-                    </div></div>       
-                             </div>
+					</div>
+				</div>
+			</div>
+	
                <br>
                 <div class="row">
                 <div class="form-group">
                 <div class="col-md-2">
-                    <label for="email">SUPPLIER NAME</label></div>
+                    <label for="name">SUPPLIER NAME</label></div>
                     <div class="col-md-6">
                     
-                        <input type="text" id="email" name="s_name" class="form-control"></div>
+                        <input type="text" id="name" value="${category.s_name}"name="s_name" class="form-control"></div>
 
                     
                 </div>
@@ -112,27 +118,27 @@ name="s_id" disabled="true" class="form-control">
                <div class="row">
                 <div class="form-group">
                 <div class="col-md-2">
-                    <label for="password" >STOCK</label></div>
+                    <label for="stock" >STOCK</label></div>
                     <div class="col-md-6">
-                        <input type="text" id="pw" name="s_stock"  class="form-control"/>
+                        <input type="text" id="stk" name="s_stock" value="${category.s_stock}" class="form-control"/>
 </div></div>
                     
                 </div><br><br>
                  <div class="row">
                 <div class="form-group">
                 <div class="col-md-2">
-                    <label for="password" >TOTAL VALUE</label></div>
+                    <label for="value" >TOTAL VALUE</label></div>
                     <div class="col-md-6">
-                        <input type="text" id="pw" name="s_tot_val"  class="form-control"/>
+                        <input type="text" id="value" name="s_tot_val" value="${category.s_tot_val}" class="form-control"/>
 </div></div>
                     
                 </div><br><br>
                  <div class="row">
                 <div class="form-group">
                 <div class="col-md-2">
-                    <label for="password" >ADDRESS</label></div>
+                    <label for="addr" >ADDRESS</label></div>
                     <div class="col-md-6">
-                        <input type="text" id="pw" name="s_addr"  class="form-control"/>
+                        <input type="text" id="addr" value="${category.s_addr}" name="s_addr"  class="form-control"/>
 </div></div>
                     
                 </div><br><br>
@@ -142,15 +148,15 @@ name="s_id" disabled="true" class="form-control">
                 <div class="form-group">
                     <div class="col-md-1">`
                     <t1>
-                    <c:if test="${id eq '0'}">
-<form:form action="addsup" method="post">                        
+                    <c:if test="${empty category}">
+<form:form action="addSup" method="post">                        
                 <button type="submit" class="btn btn-success">
 
                 ADD
                
                 </button> </form:form> 
                 </c:if>
-                <c:if test="${id ne '0'}">
+                <c:if test="${!empty category}">
 <form:form action="updatesup" method="post">                        
                 <button type="submit" class="btn btn-success">
 
@@ -163,7 +169,7 @@ name="s_id" disabled="true" class="form-control">
                     </t2></div>
                 </div></div>
            <!-- /form -->
-        </div> <!-- ./container --></body>
+        </div> </form:form><!-- ./container --></body>
 </html>
 
 		

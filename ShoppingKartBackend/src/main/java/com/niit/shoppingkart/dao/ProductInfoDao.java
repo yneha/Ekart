@@ -9,9 +9,11 @@ import com.niit.shoppingkart.bean.ProductInfo;
 public interface ProductInfoDao {
 
 	public List<ProductInfo> list();
-	public ProductInfo get(int pdtid);
+	public List<ProductInfo> showlist();
+	public ProductInfo get(String pdtid);
+	public List<ProductInfo> gets(String name);
 	public void update(ProductInfo pdt);
-	public void delete(int pdtid);
+	public void delete(String pdtid);
 	
 	
 	

@@ -11,44 +11,35 @@ import com.niit.shoppingkart.dao.ProductDao;
 
 public class App 
 {
-	static AnnotationConfigApplicationContext context;
 	static ProductDao  pdtdao;
-	public App()
-	{
-		 pdtdao =  (ProductDao) context.getBean("ProductDao");
-	}
-    @SuppressWarnings("unchecked")
+	@SuppressWarnings("unchecked")
 	public static void main( String[] args )
     {
   	
-		context = new AnnotationConfigApplicationContext();
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 		
 		context.scan("com.niit.shoppingkart");
 		
 		context.refresh();
-		
+		pdtdao=  (ProductDao) context.getBean("ProductDao");
 		App app= new App();
 
-
-       
-		Product pdt=new Product();
-	
-		app.print();
-		
-		
-	
-		
-		
+		Product p=new Product();
+		p.setCatname("ghi");p.setStock(120);
+		p.setTot_val(14000);
+		pdtdao.save(p);
+      
+			app.print();
     }
 
     public void print()
     {
-    	
+    	Product pdt=new Product();
 		List<Product> a=new ArrayList<Product>();
-		a=pdtdao.list();
+		a=pdtdao.showlist();
 		for( Product c : a)
 			{
-				System.out.println(c.getCatid() +":"+c.getStock()+":"+ c.getTot_val()+":"+ c.getCatname()) ;
+			System.out.println(c.getCatid() +":"+c.getStock()+":"+ c.getTot_val()+":"+ c.getCatname()+":"+c.getDel()) ;
 			}
     }
     

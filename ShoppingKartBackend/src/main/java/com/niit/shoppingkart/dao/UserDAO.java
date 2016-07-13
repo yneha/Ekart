@@ -18,7 +18,7 @@ import com.niit.shoppingkart.bean.User;
 
 		public void saveOrUpdate(User user);
 		
-		
+		public User check(String email);
 		public void delete(String name);
 		
 		

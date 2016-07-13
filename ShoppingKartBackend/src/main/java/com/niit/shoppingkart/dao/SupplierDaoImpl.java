@@ -1,7 +1,9 @@
 package com.niit.shoppingkart.dao;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -21,12 +23,26 @@ public class SupplierDaoImpl implements SupplierDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
-
+	private static final AtomicInteger counter = new AtomicInteger(1);
 
 	public  SupplierDaoImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
 
+	@Transactional
+	public Supplier getByName(String s_name) {
+		String hql = "from Supplier where s_name=" + "'"+ s_name +"'";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		
+		@SuppressWarnings("unchecked")
+		List<Supplier> listCategory = (List<Supplier>) query.list();
+		
+		if (listCategory != null && !listCategory.isEmpty()) {
+			return listCategory.get(0);
+		}
+		
+		return null;
+	}
 	@Transactional
 	public List<Supplier> list() {
 		@SuppressWarnings("unchecked")
@@ -36,8 +52,8 @@ public class SupplierDaoImpl implements SupplierDao {
 
 		return listCategory;
 	}
-
-	public Supplier get(int s_id) {
+	@Transactional
+	public Supplier get(String s_id) {
 		//String hql="from Product where pdtid="+pdtid;
 		//Query q=sessionFactory.openSession().createQuery(hql);
 		
@@ -62,6 +78,10 @@ public class SupplierDaoImpl implements SupplierDao {
 	
 	@Transactional
 	public void update(Supplier pdt) {
+		int a=counter.getAndIncrement();
+		System.out.println("Autogeneration"+a);
+		String con=Integer.toString(a);
+		 pdt.setS_id("SUP_" + con);
 		Session s= sessionFactory.openSession();
 		s.saveOrUpdate(pdt);
 		s.flush();
@@ -69,14 +89,25 @@ public class SupplierDaoImpl implements SupplierDao {
 	}
 
 	@Transactional
-	public void delete(int s_id) {
+	public void delete(String s_id) {
+		
+String hql = "UPDATE Supplier set del =:n WHERE s_id="+s_id;
+		
+		Query q=sessionFactory.openSession().createQuery(hql);
+		q.setParameter("n","t");  
+		q.executeUpdate();
+			
 		
 			
-		Supplier pdtdelete=new Supplier();
-		pdtdelete.setS_id(s_id);
-		sessionFactory.getCurrentSession().delete(pdtdelete);
-			
 		
+	}
+	@Transactional
+	public List<Supplier> showlist() {
+		Criteria c=sessionFactory.openSession().createCriteria(Supplier.class);
+		c.add(Restrictions.ne("del","t" ));
+		@SuppressWarnings("unchecked")
+		List<Supplier> pdtlist=(List<Supplier>)c.list();
+		return pdtlist;
 	}
 
 	

@@ -9,12 +9,10 @@
 
 
  
-<script
-	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link rel="stylesheet"
@@ -22,14 +20,27 @@
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
+<script>
+var a=${list};
 
+  $(function() {
+    var availableTags = [
+   
+    ];
+    $( "#tag" ).autocomplete({
+      source: availableTags
+    });
+  });
+  </script>
 <title>FUNTASTIC TOYS-Products</title>
 
 
 <script>
+
 	var app = angular.module("myApp", []);
 	app.controller("myCtrl", function($scope) {
 		$scope.list = ${list};
+		
 		
 	});
 </script>
@@ -115,12 +126,32 @@ t1 {
 		</nav>
 	</div>
 	
-
+<div class="container">
+	<form:form action="search" method="post">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3 ">
+				<div id="imaginary_container">
+					<div class="input-group stylish-input-group">
+						<div class="form-group has-feedback has-feedback-left">
+							<input type="text" name="cn" id="tag" class="form-control" placeholder="Search" />
+							<i class="glyphicon glyphicon-search form-control-feedback"></i>
+						</div>
+						<span class="input-group-addon">
+							<button type="submit">
+								<span class="glyphicon glyphicon-arrow-right"></span>
+							</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div></form:form>
+	</div>
+		
 		
 		<br><br>
 <div class="container" >
            
-<form:form action="addpdt?key=0" method="post">
+<form:form action="addpdt" method="post">
 	 <div class="form-group">	
            
    <t1>        <button type="submit" class="btn btn-success">ADD A NEW PRODUCT INTO THE LIST</button></t1></div>
@@ -132,7 +163,7 @@ t1 {
 		
 	<center>${op}</center>
 	<br>
-	<c:if test="${!empty list}">
+	<c:if test="${!empty productList}">
 	<div class="container">
 <table width="50%" class="table table-hover">
 	<tr>
@@ -143,12 +174,14 @@ t1 {
 		<th align="left">Brand</th>
 		<th align="left">Material</th>
 		<th align="left">Price(Rs.)</th>
+		<th align="left">Category Name</th>
+		<th align="left">Supplier Name</th>
 		<th>Update</th>
 		<th>Delete</th>
 	
 		
 	</tr>
-	<c:forEach items="${list}" var="product" varStatus="status">
+	<c:forEach items="${productList}" var="product" varStatus="status">
 		<tr>
 			<td>${status.count}</td>
 			<td>${product.pdtid}</td>
@@ -157,15 +190,17 @@ t1 {
 			<td>${product.brand}</td>
 			<td>${product.material}</td>
 			<td>${product.price}</td>
+			<td>${product.category.catname }</td>
+			<td>${product.supplier.s_name }</td>
 			<td>
-	    <form:form action="addcat?key=${product.pdtid}" method="post">
+	    <form:form action="editpdt?key=${product.pdtid}" method="post">
         <div class="form-group">	
         
            <button type="submit" class="btn btn-success">UPDATE PRODUCT</button></div>
   </form:form></td>
   <td>
         
- <form:form action="deletepdt?key=${product.pdtid}" method="post" >
+ <form:form action="deleteproduct?key=${product.pdtid}" method="post" >
         <div class="form-group">	
         
        <button type="submit" id="demo" Onclick="return myFunction();" value="1" class="btn btn-danger">DELETE PRODUCT</button></div>
@@ -173,6 +208,7 @@ t1 {
 			 </form:form></td>		
 			
 		</tr>
+		
 	</c:forEach>
 </table></div></c:if>
   
