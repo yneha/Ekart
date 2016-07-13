@@ -148,7 +148,11 @@ t2 {
                 <div class="form-group">
                     <div class="col-md-1">`
                     <t1>
+<<<<<<< HEAD
                     <c:if test="${empty category}">
+=======
+                    <c:if test="${id eq '0'}">
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 <form:form action="addSup" method="post">                        
                 <button type="submit" class="btn btn-success">
 

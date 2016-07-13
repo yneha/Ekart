@@ -9,6 +9,7 @@
 <%@ page isELIgnored="false"%>
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<<<<<<< HEAD
  
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -25,6 +26,12 @@
     });
   });
   </script>
+=======
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
  <script>
 
  $(document).ready(function(){ 
@@ -71,8 +78,13 @@
 }
 #scroll:hover {
     background-color:#e74c3c;
+<<<<<<< HEAD
     opacity:1;filter:"alpha(opacity=50)";
     -ms-filter:"alpha(opacity=50)";
+=======
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 }
 .img-wrapper {
 	display: inline-block;
@@ -90,9 +102,12 @@
 t1 {
 	padding-left: 1em;
 }
+<<<<<<< HEAD
 t3 {
 	padding-left: 35em;
 }
+=======
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 
 t5 {
 	padding-left: 35em;
@@ -134,6 +149,7 @@ t2 {
 	left: auto;
 	right: auto;
 }
+<<<<<<< HEAD
 .carousel img {
   position: absolute;
   top: 0;
@@ -143,6 +159,8 @@ t2 {
 max-height:none;
   max-width: none;
 }
+=======
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 
 .hide {
 	display: none;
@@ -206,7 +224,11 @@ max-height:none;
 	</div>
 
 	${op}
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 	<div class="container">
 	<form:form action="search">
 		<div class="row">
@@ -236,6 +258,7 @@ max-height:none;
 	<!-- this is for the image scrolling -->
 	<br>
 	<div class="container-fluid">
+<<<<<<< HEAD
 	<div class="row">
 	<div class="col-md-3">
 	INTERESTING FACTS
@@ -245,6 +268,40 @@ max-height:none;
 						
 				
 	</div><div class="col-md-9"> 
+=======
+		<div class="row">
+			<div class="col-md-3">
+				<h3>FAST SELLING</h3>
+				<a href="char" class="circle"><center>
+						<img src="<c:url value="/resource/image/chopper.jpg" />"
+							class="img-responsive" alt="CHOPPER"
+							style="width: 150px; height: 150px">
+					</center>
+					<p>
+						<center>
+						<h5>
+							CHOPPER WITH 3 ROTORS<br>Rs.420
+						</h5>
+					</center>
+					</p>
+				</a> <a href="char" class="circle"> <center>
+						<img src="<c:url value="/resource/image/m.jpg" />"
+							class="img-responsive" alt="RUBIX CUBE"
+							style="width: 150px; height: 150px">
+					</center>
+					<p>
+						<strong><center>
+								<h5>
+									RUBIX CUBE<br>Rs.95
+								</h5>
+							</center></strong>
+					</p>
+				</a>
+
+			</div>
+			<div class="col-md-9">
+				<div class="container-fluid">
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
 						<ol class="carousel-indicators">
@@ -305,6 +362,7 @@ max-height:none;
 
 				</div>
 			</div>
+<<<<<<< HEAD
 		
 	<!-- to display the images in circle -->
 <br>
@@ -314,6 +372,22 @@ max-height:none;
 	<hr>
 	<div class="container">
 
+=======
+		</div>
+	</div>
+	<!-- to display the images in circle -->
+<br>
+	<br>
+	<br>
+	<hr>
+	<div class="container">
+<span id="top-link-block" class="hidden">
+    <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+    </a>
+</span>
+	
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 		<h3>BEST BARGAINS
 <t5>
 			<button type="button" class="btn btn-info">VIEW ALL</button></t5>
@@ -325,7 +399,11 @@ max-height:none;
 				<a href="Productservlet?param=f_mono" class="circle">
 					<p>20% OFF</p> 
 					
+<<<<<<< HEAD
 					<img src="<c:url value="/resource/image/j.jpg"  />"
+=======
+					<img src="<c:url value="/resource/image/20.jpg"  />"
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 						class="img-responsive" alt="FunSkool"
 						style="width: 150px; height: 150px">
 				
@@ -381,6 +459,7 @@ max-height:none;
 			<div class="container">
 		<h3>SHOP BY AGE<t5>
 			<button type="button" class="btn btn-info">VIEW ALL</button></t5>
+<<<<<<< HEAD
 		</h3><div class="img-wrapper">
 		<div class="row">
 			
@@ -410,16 +489,59 @@ max-height:none;
 				<a href="hw.jsp" class="circle"> <img
 						src="<c:url value="/resource/image/5-8.jpg" />"
 						class="img-responsive" alt="5 to 8 years"
+=======
+		</h3>
+		<div class="row">
+			<div class="img-wrapper">
+	<div class="col-md-2">
+				<a href="hw.jsp" class="circle"> <img
+						src="<c:url value="/resource/image/sba.png" />"
+						class="img-responsive" alt="9 to 12 years"
+						style="width: 150px; height: 150px">
+				</a>
+			</div>
+		
+			<div class="col-md-2">
+				<a href="hw.jsp" class="circle"> <img
+						src="<c:url value="/resource/image/0-2.jpg" />"
+						class="img-responsive" alt="0 to 2 years"
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
+						style="width: 150px; height: 150px">
+				</a>
+			</div>
+			<div class="col-md-2">
+				<a href="hw.jsp" class="circle"> <img
+<<<<<<< HEAD
+						src="<c:url value="/resource/image/9-12.jpg" />"
+						class="img-responsive" alt="9 to 12 years"
+=======
+						src="<c:url value="/resource/image/3-4.jpg" />"
+						class="img-responsive" alt="3 to 4 years"
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
+						style="width: 150px; height: 150px">
+				</a>
+			</div>
+			<div class="col-md-2">
+<<<<<<< HEAD
+				<a href="hw.jsp" class="circle"> <img
+						src="<c:url value="/resource/image/12+.jpg" />"
+=======
+				<a href="hw.jsp" class="circle"> <img
+						src="<c:url value="/resource/image/5-8.jpg" />"
+						class="img-responsive" alt="5 to 8 years"
 						style="width: 150px; height: 150px">
 				</a>
 			</div>
 			<div class="col-md-2">
 				<a href="hw.jsp" class="circle"> <img
 						src="<c:url value="/resource/image/9-12.jpg" />"
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 						class="img-responsive" alt="9 to 12 years"
 						style="width: 150px; height: 150px">
 				</a>
 			</div>
+<<<<<<< HEAD
+=======
 			<div class="col-md-2">
 				<a href="hw.jsp" class="circle"> <img
 						src="<c:url value="/resource/image/12+.jpg" />"
@@ -427,6 +549,7 @@ max-height:none;
 						style="width: 150px; height: 150px">
 				</a>
 			</div>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 		
 		</div>
 		</div>
@@ -435,6 +558,7 @@ max-height:none;
 <br><br><br>
 		<hr>
 			<div class="container">
+<<<<<<< HEAD
 		<h3>Shop by Categories
 		<t3>
 			<button type="button" class="btn btn-info">VIEW ALL</button></t3>
@@ -442,6 +566,14 @@ max-height:none;
 <div class="img-wrapper">
 		<div class="row">
 			
+=======
+		<h3>Shop by Categories<t5>
+			<button type="button" class="btn btn-info">VIEW ALL</button></t5>
+		</h3>
+
+		<div class="row">
+			<div class="img-wrapper">
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 			<div class="col-md-2">
 				<a href="hw.jsp" class="circle">
 					<img
@@ -451,7 +583,11 @@ max-height:none;
 				</a>
 			</div>
 			<div class="col-md-2">
+<<<<<<< HEAD
 				<a href="barbie" class="circle">
+=======
+				<a href="barbie.jsp" class="circle">
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 					 <img src="<c:url value="/resource/image/pu1.jpg" />"
 						class="img-responsive" alt="barbie"
 						style="width: 150px; height: 150px">
@@ -491,18 +627,27 @@ max-height:none;
 		<br><br><br>
 		<hr>
 			<div class="container">
+<<<<<<< HEAD
 			<h3>Only 4 U!!
 			<t3>
 					<button type="button" class="btn btn-info">VIEW ALL</button></t3>
 				</h3>	<div class="img-wrapper">
 		<div class="row">
 		
+=======
+			<h3>Only 4 U!!<t5>
+					<button type="button" class="btn btn-info">VIEW ALL</button></t5>
+				</h3>
+		<div class="row">
+			<div class="img-wrapper">
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 			
 			<div class="col-md-2">
 				<a href="Productservlet?param=s_brown" class="circle"> <img
 						src="<c:url value="/resource/image/beans.jpg" />"
 						class="img-responsive" alt="brown bear"
 						style="width: 150 px; height: 150px;">
+<<<<<<< HEAD
 					<br>
 						<strong><center>
 								<h5>BROWN BEAR-Rs.299
@@ -510,6 +655,15 @@ max-height:none;
 								</center>
 							</strong>
 					</a>
+=======
+					<p>
+						<strong><center>
+								<h5>BROWN BEAR-Rs.299
+							
+								</center>
+							</h5></strong>
+					</p></a>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 			</div>
 			<div class="col-md-2">
 				<a href="Productservlet?param=s_bheem" class="circle"> <img
@@ -519,9 +673,15 @@ max-height:none;
 					<p>
 						<strong><center>
 								<h5>CHOTA BHEEM-Rs.150
+<<<<<<< HEAD
 							</h5>
 								</center>
 							</strong>
+=======
+							
+								</center>
+							</h5></strong>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 					</p></a>
 			</div>
 			<div class="col-md-2">
@@ -531,9 +691,15 @@ max-height:none;
 					<p>
 						<strong><center>
 								<h5>LEGO-Rs.850
+<<<<<<< HEAD
 							</h5>
 								</center>
 							</strong>
+=======
+							
+								</center>
+							</h5></strong>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 					</p></a>
 			</div>
 
@@ -545,9 +711,15 @@ max-height:none;
 					<p>
 						<strong><center>
 								<h5>ELEPHANT -Rs.450
+<<<<<<< HEAD
 							</h5>
 								</center>
 							</strong>
+=======
+							
+								</center>
+							</h5></strong>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 					</p></a>
 			</div>
 			<div class="col-md-2">
@@ -558,9 +730,15 @@ max-height:none;
 					<p>
 						<strong><center>
 								<h5>PANDA -Rs.150
+<<<<<<< HEAD
 							</h5>
 								</center>
 							</strong>
+=======
+							
+								</center>
+							</h5></strong>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 					</p></a>
 			</div>
 			<div class="col-md-2">
@@ -571,9 +749,15 @@ max-height:none;
 					<p>
 						<strong><center>
 								<h5>POKEMON -Rs.250
+<<<<<<< HEAD
 							</h5>
 								</center>
 							</strong>
+=======
+							
+								</center>
+							</h5></strong>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 					</p></a>
 			</div>
 		</div>
@@ -582,9 +766,15 @@ max-height:none;
 		<hr>
 		<div class="container">
 			<h3>Shop by Brands</h3>
+<<<<<<< HEAD
 <div class="img-wrapper">
 		<div class="row">
 			
+=======
+
+		<div class="row">
+			<div class="img-wrapper">
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 			<div class="col-md-2">
 				<a href="hw.jsp" class="circle">
 					<p>Hot Wheels</p> <img
@@ -631,6 +821,7 @@ max-height:none;
 			</div>
 		</div>
 </div>
+<<<<<<< HEAD
 	
 
 <div class="row-fluid summary">
@@ -656,6 +847,29 @@ $(this).text(function(i,old){
 });
 </script>
 
+=======
+
+<div class="container">
+  
+    <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#demo">
+      <span class="glyphicon glyphicon-collapse-down"></span> View All Brands
+    </button>
+  <div id="demo" class="collapse">
+  <ul>
+  <center><li><a>Thomas And Friends</a></li>
+  <li><a>Dimpy Stuff</a></li>
+  <li><a>Spar</a></li></center>
+  </ul></div>
+</div></div><script>
+$(document).ready(function(){
+  $("#demo").on("hide.bs.collapse", function(){
+    $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> View All Brands');
+  });
+  $("#demo").on("show.bs.collapse", function(){
+    $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Hide All Brands');
+  });
+});</script>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 <hr>
 	<br>
 <div class="container">
@@ -739,6 +953,10 @@ Your relatives children's birthday and you don't know what you should get them.
 	
 </div>
 
+<<<<<<< HEAD
 
+=======
+</script>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 </body>
 </html>

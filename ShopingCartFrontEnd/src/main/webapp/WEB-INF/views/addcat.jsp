@@ -67,6 +67,7 @@ t2 {
 
 		</nav>
 	</div>
+<<<<<<< HEAD
 
 	<center>
 		<h2>
@@ -84,6 +85,15 @@ t2 {
 						<label for="id">CATEGORY ID</label>
 					</div>
 					<div class="col-md-6">
+=======
+	
+	<center><h2>
+	<c:if test="${id eq '0'}">ADD PRODUCT INFORMATION
+	</c:if>
+	<c:if test="${id ne '0'}">EDIT PRODUCT INFORMATION</c:if>
+	</h2></center>
+	<div class="container">
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 	
 						<c:if test="${!empty category}">
 

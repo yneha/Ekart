@@ -11,16 +11,23 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+<<<<<<< HEAD
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Min;
 
+=======
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 
 
 	
 	@Entity
 
 	public class ProductInfo {
+<<<<<<< HEAD
 		
+=======
+	
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 		@Id
 		
 	    @Basic(optional = false)

@@ -193,7 +193,11 @@ t1 {
 			<td>${product.category.catname }</td>
 			<td>${product.supplier.s_name }</td>
 			<td>
+<<<<<<< HEAD
 	    <form:form action="editpdt?key=${product.pdtid}" method="post">
+=======
+	    <form:form action="addpdt?key=${product.pdtid}" method="post">
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
         <div class="form-group">	
         
            <button type="submit" class="btn btn-success">UPDATE PRODUCT</button></div>

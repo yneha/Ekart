@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: LENOVO
+=======
+Built-By: user
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 Build-Jdk: 1.8.0_77
 Created-By: Maven Integration for Eclipse
 

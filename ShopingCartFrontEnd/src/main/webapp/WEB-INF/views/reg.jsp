@@ -186,7 +186,11 @@ t2 {
 <div class="container">
             <form:form commandName="userForm" action="register">
                 <h2>Registration Form</h2>
+<<<<<<< HEAD
               <div class="row">
+=======
+              
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
                  <div class="form-group">
                     <label for="password" class="col-md-3">NAME</label>
                     <div class="col-md-4">

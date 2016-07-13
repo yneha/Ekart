@@ -68,6 +68,7 @@ t2 {
 		</nav>
 	</div>
 	<h1></h1>
+<<<<<<< HEAD
 	<center>
 		<h2>
 			<c:if test="${empty product.pdtid}">ADD PRODUCT INFORMATION
@@ -234,5 +235,86 @@ t2 {
 	</div>
 	<!-- ./container -->
 </body>
+=======
+	<center>	<h2><c:if test="${id eq '0'}">ADD PRODUCT INFORMATION
+	</c:if>
+	<c:if test="${id ne '0'}">EDIT PRODUCT INFORMATION</c:if></h2></center>
+	<div class="container">
+	<form:form action="addPdt" method="post">
+	
+               <br>
+	<div class="row">
+		 <div class="form-group">
+		 <div class="col-md-2">
+                    <label for="id" >PRODUCT NAME</label></div><div class="col-md-6">
+<input type="text" id="id" 
+name="name" class="form-control">
+ </div></div></div>
+               <br> <br> <br>
+               <div class="row">
+                <div class="form-group">
+                <div class="col-md-2">
+                    <label for="password" >AGE GROUP</label></div>
+                    <div class="col-md-6">
+                        <input type="text" id="pw" name="agegrp"  class="form-control"/>
+</div></div>
+                    
+                </div><br><br>
+                 <div class="row">
+                <div class="form-group">
+                <div class="col-md-2">
+                    <label for="password" >BRAND</label></div>
+                    <div class="col-md-6">
+                        <input type="text" id="pw" name="brand"  class="form-control"/>
+</div></div>
+                    
+                </div><br><br>
+                 <div class="row">
+                <div class="form-group">
+                <div class="col-md-2">
+                    <label for="password" >MATERIAL</label></div>
+                    <div class="col-md-6">
+                        <input type="text" id="pw" name="material"  class="form-control"/>
+</div></div>
+                    
+                </div><br><br><div class="row">
+                <div class="form-group">
+                <div class="col-md-2">
+                    <label for="email">PRICE</label></div>
+                    <div class="col-md-6">
+                    
+                        <input type="text" id="email" name="price" class="form-control"></div>
+
+                    
+                </div>
+                </div>
+                              <div class="row">
+               
+                <div class="form-group">
+                    <div class="col-md-1">`
+                    <t1><c:if test="${id eq '0'}">
+<form:form action="addPdt" method="post">                        
+                <button type="submit" class="btn btn-success">
+
+                ADD
+               
+                </button> </form:form> 
+                </c:if>
+                <c:if test="${id ne '0'}">
+<form:form action="updatepdt" method="post">                        
+                <button type="submit" class="btn btn-success">
+
+                EDIT
+                 </button> </form:form> 
+                </c:if>
+                    </t1></div>
+                       
+                    <div class="col-md-1">
+                    <t2><button type="reset" class="btn btn-danger">RESET</button>
+                    </t2></div>
+                </div></div>
+            </form:form> <!-- /form -->
+        </div> <!-- ./container --></body>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 </html>
 

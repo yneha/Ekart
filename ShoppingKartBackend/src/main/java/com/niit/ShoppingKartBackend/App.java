@@ -24,12 +24,29 @@ public class App
 		pdtdao=  (ProductDao) context.getBean("ProductDao");
 		App app= new App();
 
+<<<<<<< HEAD
 		Product p=new Product();
 		p.setCatname("ghi");p.setStock(120);
 		p.setTot_val(14000);
 		pdtdao.save(p);
       
 			app.print();
+=======
+
+       
+		Product pdt=new Product();
+	
+		
+		
+		pdt.setCatname("a");
+		pdt.setStock(2);
+		pdt.setTot_val(200);
+		pdtdao.save(pdt);
+		
+		app.print();
+		
+		
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
     }
 
     public void print()

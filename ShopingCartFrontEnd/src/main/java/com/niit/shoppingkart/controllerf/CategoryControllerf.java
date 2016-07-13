@@ -37,6 +37,13 @@ public class CategoryControllerf {
 	@RequestMapping("/addCategory")
 	public ModelAndView addCategory(@ModelAttribute Product category) {
 		
+<<<<<<< HEAD
+=======
+	
+	
+		
+		System.out.println("save");
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 		catdao.save(category);
 		ModelAndView mv=new ModelAndView("/categories");
 		String op="ITEM IS ADDED";
@@ -159,6 +166,7 @@ ModelAndView mv = new ModelAndView("/categories");
 	
 
 @RequestMapping("/addpdt")
+<<<<<<< HEAD
 public String viewpdtadd(Map<String, Object> model,Model modell) {
 	 System.out.println("welcomee to addpdt");
    ProductInfo product = new ProductInfo();
@@ -170,6 +178,14 @@ public String viewpdtadd(Map<String, Object> model,Model modell) {
 	modell.addAttribute("supplierList", this.supdao.showlist());
    model.put("product", product);
    return "addpdt";
+=======
+public ModelAndView addcat(@RequestParam("key") String id) 
+{
+	System.out.println(id);
+	ModelAndView mv=new ModelAndView("addpdt");
+	mv.addObject("id", id);
+	return mv;
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 }
 	@RequestMapping("/addPdt")
 	public String addpdt(@ModelAttribute("product") ProductInfo product) {
@@ -252,11 +268,19 @@ public String viewpdtadd(Map<String, Object> model,Model modell) {
 	//Suppplliierreerrrr
 	
 	@RequestMapping("/addsup")
+<<<<<<< HEAD
 	public ModelAndView addsup() 
 	{
 	
 		ModelAndView mv=new ModelAndView("addsup");
 	
+=======
+	public ModelAndView addsup(@RequestParam("key") String id) 
+	{
+		System.out.println(id);
+		ModelAndView mv=new ModelAndView("addsup");
+		mv.addObject("id", id);
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 		return mv;
 	}
 	@RequestMapping("/addSup")

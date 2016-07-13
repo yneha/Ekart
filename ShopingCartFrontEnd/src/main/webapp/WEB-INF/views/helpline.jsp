@@ -5,7 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<<<<<<< HEAD
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+=======
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script
@@ -17,7 +23,10 @@
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <title>Customer Care</title>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 <style>
 .navbar-default {
 	background-color: #76448A;
@@ -89,6 +98,7 @@ Assistance at your finger tips
 							<button type="submit" formaction="#">
 								<span class="glyphicon glyphicon-arrow-right"></span>
 							</button>
+<<<<<<< HEAD
 						</span>0
 				</div>
 			</div>
@@ -150,10 +160,56 @@ Happy shopping.
              <p>           
 
 
+=======
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	Type of your Problem
+	<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Order</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body"><a data-toggle="collapse" data-parent="#accordion" href="#collapse4">How can I place an Order?</a></div>
+        <div class="panel-body"><a data-toggle="collapse" data-parent="#accordion" href="#collapse5">How can I track an Order?</a></div>
+        <div class="panel-body"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6">How can I cancel an Order?</a></div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Shopping</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body"><a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Why do I see different prices for the same product?</a></div>
+        <div class="panel-body"><a data-toggle="collapse" data-parent="#accordion" href="#collapse8">What does 'Permanently Discontinued' or 'Out of Print' mean?</a></div>
+        <div class="panel-body"><a data-toggle="collapse" data-parent="#accordion" href="#collapse9">View all queries related to 'Shopping'.</a></div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Payment</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body"><a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+        What is Cash on Delivery?</a>
+       
+        <div id="collapse10" class="panel-collapse collapse">
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
 
 With Cash on Delivery (CoD), you can pay for your order in cash when it is actually being delivered.
 
 You can also pay with your Credit or Debit card if the courier person is carrying a card machine.
+<<<<<<< HEAD
 
 
  </p>
@@ -173,6 +229,21 @@ You can also pay with your Credit or Debit card if the courier person is carryin
                  </div>
          
        
+=======
+        </div> <br>
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">How can I pay for an order?</a>
+
+<div id="collapse11" class="panel-collapse collapse"> 
+You can choose to pay for an order with any of the below methods:
+
+    Cash on Delivery  
+    Net Banking
+    Visa, MasterCard, Maestro and American Express Credit or Debit cards issued in India and 21 other countries
+    Gift Card</div>
+      </div></div>
+    </div>
+  </div> 
+>>>>>>> 7567ab24600c129060ee33bbdf09936f85eb8bdc
   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">CONTACT US</button>
   <div id="demo" class="collapse">
     <div class="container">
